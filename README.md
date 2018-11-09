@@ -24,6 +24,7 @@
 | |   |____ index.vue button组件的源码
 | |____ index.js 统一导出文件夹
 |____ public 静态资源文件夹
+|____ vue.config 自定义配置
 |____ node_modules
 ```
 * 需要用到的关键包

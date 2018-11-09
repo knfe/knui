@@ -5,7 +5,7 @@
 </template>
 <script>
 export default{
-  name: 'KButton',
+  name: 'knButton',
   data () {
     return {
       msg: 'button'

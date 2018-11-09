@@ -1,7 +1,7 @@
-import Button from './button/index.js'
+import knButton from './button'
 
 const components = [
-  Button
+  knButton
 ]
 
 const install = function (Vue) {
@@ -13,7 +13,12 @@ if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)
 }
 
+export {
+  install,
+  knButton
+}
+
 export default {
   install,
-  Button
+  knButton
 }

@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <kn-button></kn-button>
     <router-view></router-view>
   </div>
 </template>
