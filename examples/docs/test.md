@@ -1,9 +1,9 @@
 <div class="demo-block">
-  <w-button>默认尺寸</w-button>
+  <kn-button>默认尺寸</kn-button>
 </div>
 
 ::: demo
 
 ```html
-<w-button>默认尺寸</w-button>
+<kn-button>默认尺寸</kn-button>
 ```

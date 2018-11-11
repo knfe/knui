@@ -1,4 +1,8 @@
 module.exports = {
+  plugins: [
+    require('precss'),
+    require('autoprefixer')
+  ],
   'features': {
     'bem': {
       'shortcuts': {

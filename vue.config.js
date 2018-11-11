@@ -95,6 +95,12 @@ module.exports = {
     // 是否提取 css 文件到单独的文件中，开发环境不要开启，否则样式热更新不可用
     extract: process.env.NODE_ENV === 'production',
     // 是否生成 .css.map 文件
-    sourceMap: false
+    sourceMap: false,
+    loaderOptions: {
+      // 给 css-loader 传递选项
+      css: {
+        importLoaders: 1
+      }
+    }
   }
 }
