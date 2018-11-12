@@ -3,8 +3,8 @@
 * 拉取代码
 
 ```bash
-  git clone https://github.com/kerentang/kn-ui-temp.git
-  cd kn-ui-temp/
+  git clone https://github.com/knfe/knui.git
+  cd knui/
   # 您也可以使用yarn install
   npm install
   # 如果安装过程中发现 har-validator 安装失败，no match har-validator@5.1.2
