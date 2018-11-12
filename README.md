@@ -52,8 +52,7 @@
 | |____ docs - 对应的UI组件说明演示文档
 |____ packages 所有UI组件存放目录
 | |____ button button组件
-| |   |____ demo 每个UI组件包含的demo
-| |   |____ test 每个UI组件包含的单元测试
+| |   |____ demo 每个UI组件包含的demo # unit test文件请在根目录tests/unit中新增*.spec.js文件，说明如下：
 | |   |____ zn-CN.md 单个UI组件说明（中文）
 | |   |____ en-US.md 单个UI组件说明（English）
 | |   |____ index.scss 每个UI组件的样式文件
@@ -63,6 +62,10 @@
 |____ vue.config 自定义配置
 |____ node_modules
 ```
+
+* packages所有组件下的组件测试请在tests/unit下新建.spec.js文件
+  * [vue-cli:test:unit默认路径分离不是必要的](https://github.com/vuejs/vue-cli/issues/1245)
+  * [@vue/cli-plugin-unit-mocha](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-unit-mocha)
 
 * 部分主要npm包的使用说明
   * 样式单独抽离postcss - `vue cli3默认使用了postcss,只需提供一个配置文件即可`
