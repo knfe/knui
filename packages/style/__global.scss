@@ -1,4 +1,23 @@
 /** 
 * 全局公共变量
-* 以 .g (全局变量)、.fs (全局字体大小)、.s (size1 - ~) / .h (h1 - h6) /  等开头
+* 以 .g (全局变量)、.fs (全局字体大小)、.s (size1 - ~) / .h (h1 - h6) / .cl (color) 等开头
 */
+
+// 屏幕适配设置
+$htmlFontSizeVal: $htmlFontSize * 1px;
+$htmlMaxWidth: 768px;
+
+// 带上钱主题色
+$color-primary: #ff7015;
+$color-secondary1: #ffb500;
+$color-secondary2: #6fc93e;
+$color-default: #333;
+$color-tertiary: #999;
+$color-placeholder: #bababa;
+$color-light: #e4e4e4;
+$color-link: #4a90e2;
+$color-important: #ff6262;
+$color-danger: #f00;
+$color-success: #69c959;
+$color-warning: #ffb844;
+$color-bg-default: #f8f8f8;  

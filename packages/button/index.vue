@@ -1,14 +1,30 @@
 <template>
-<div>
-  <button>默认尺寸{{msg}}</button>
-</div>
+<button :class="kn-button" :type="type" :disabled="disabled">
+  <slot></slot>
+</button>
 </template>
 <script>
 export default{
   name: 'knButton',
   data () {
-    return {
-      msg: 'button'
+    return {}
+  },
+  props: {
+    type: {
+      type: String,
+      default: 'default'
+    },
+    size: {
+      type: String,
+      default: 'small'
+    },
+    plain: {
+      type: Boolean,
+      default: false
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   }
 }
