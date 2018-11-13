@@ -49,16 +49,7 @@ function resolve (dir) {
 
 module.exports = {
   // 入口
-  pages: {
-    app: {
-      // entry for the page
-      entry: 'examples/main.js',
-      // the source template
-      template: 'examples/index.html',
-      // output as dist/index.html
-      filename: 'index.html'
-    }
-  },
+  pages: require('./scripts/demo'),
   chainWebpack: config => {
     // 修改别名src为examples
     config.resolve.alias.set('@', resolve('examples'))

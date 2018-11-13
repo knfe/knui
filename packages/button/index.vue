@@ -1,14 +1,14 @@
 <template>
-<div>
-  <button>默认尺寸{{msg}}</button>
-</div>
+  <div class="kn-button">
+    <button>{{msg}}</button>
+  </div>
 </template>
 <script>
-export default{
-  name: 'knButton',
+export default {
+  name: 'kn-button',
   data () {
     return {
-      msg: 'button'
+      msg: 'hello kn-button'
     }
   }
 }
