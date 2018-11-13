@@ -1,0 +1,13 @@
+/**
+ * 默认 html font-size 数值
+ */
+$htmlFontSize: 100 !default;
+
+/**
+ * px 单位值转换到 rem 单位值
+ * @param {number} 像素值
+ * @return 单位为rem值
+ */
+@function px2rem($px) {
+  @return $px / $htmlFontSize * 1rem;
+}
