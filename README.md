@@ -20,7 +20,7 @@
   * UI风格 - 待定（`默认橙色系 - UI设计规范`
   * 每个组件必须包含：
     * `demo`
-    * `unit test`
+    * `unit test`unit test文件请在根目录tests/unit中新增*.spec.js文件
     * `index.vue`
     * `index.scss`
       * 优先提取公共样式至 `style/*.scss`

@@ -1,9 +1,6 @@
 <template>
   <div class="kn-button-demo">
     <h1>button demo</h1>
-    <button>button1</button>
-    <button>button2</button>
-    <button>button3</button>
   </div>
 </template>
 <script>
