@@ -1,11 +1,11 @@
 <template>
-<button :class="kn-button" :type="type" :disabled="disabled">
+<button class="kn-button" :type="type" :disabled="disabled">
   <slot></slot>
 </button>
 </template>
 <script>
-export default{
-  name: 'knButton',
+export default {
+  name: 'kn-button',
   data () {
     return {}
   },

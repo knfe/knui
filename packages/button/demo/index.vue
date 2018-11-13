@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="kn-button-demo">
     <h1>button demo</h1>
     <button>button1</button>
     <button>button2</button>
@@ -8,7 +8,7 @@
 </template>
 <script>
 export default {
-  name: 'demo-button',
+  name: 'kn-button-demo',
   data () {
     return {
       msg: 'button!'
@@ -16,8 +16,7 @@ export default {
   }
 }
 </script>
-<style>
-/*
- * 引入样式文件 or 按照样式规范自定义样式
- */
+<style lang="scss">
+.kn-button-demo {
+}
 </style>
