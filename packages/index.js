@@ -1,24 +1,28 @@
-import knButton from './button'
+/**
+ * this files is gererated by scripts/create/index.js
+ */
 
-const components = [
-  knButton
-]
+// import packages
+import KnButton from './button/index.vue'
 
+// package version
+const version = '0.1.0'
+
+// init components
+const components = [KnButton]
 const install = function (Vue) {
   if (install.installed) return
   components.map(component => Vue.component(component.name, component))
 }
-
 if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)
 }
 
-export {
-  install,
-  knButton
-}
+// export components
+export { KnButton }
 
+// export default
 export default {
-  install,
-  knButton
+  version,
+  install
 }
