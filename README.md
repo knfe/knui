@@ -71,5 +71,35 @@
   * 样式单独抽离postcss - `vue cli3默认使用了postcss,只需提供一个配置文件即可`
     * [详见vue-cli3 postcss配置说明](https://cli.vuejs.org/zh/guide/css.html#postcss)
     * 参考官网配置 [postcss-loader](https://github.com/postcss/postcss)
-  * webpack 单独打包样式文件 - 待配置
+  * webpack 单独打包样式文件
+    * 打包至根目录lib/index
   * babel-import 按需引入整个组件
+
+## 组件开发划分
+
+### 样式书写注意
+  * 公共样式务必写到style/*.scss文件内，组内样式写在index.scss内
+  * 样式命名规范务必先阅读`BEM规范`和`命名空间`
+
+### 布局组件
+  * row
+  * col
+  * grid
+
+### 基础组件
+  * alert
+  * dialog
+  * button - keren
+  * card
+  * checkout
+  * redio
+  * input
+  * loading
+  * spinner
+  * progress
+  * select
+  * piker3
+  * form
+  * dropdown
+  * swipe
+  * option
