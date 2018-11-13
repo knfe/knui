@@ -11,7 +11,7 @@ cd knui
 npm install
 
 # checkout a new branch
-git checkout feature-button
+git checkout -b feature-button
 
 # create a component named button
 npm run create -- --name button
