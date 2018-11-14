@@ -15,6 +15,7 @@ git checkout -b feature-button
 
 # create a component named button
 npm run create -- --name button
+# 请同步更新plans.md，将自己的github id后缀到开发的组件名称后面！
 
 # develop
 npm run serve
@@ -39,7 +40,7 @@ npm run serve
 |____ examples 原src目录，用来存放docs的一些文件
 | |____ assets
 | |____ components
-| |____ docs 对应的组件说明演示文档
+| |____ docs 
 |____ packages 所有组件存放目录
 | |____ button 按钮组件
 | | |____ demo 组件使用示例
@@ -66,9 +67,26 @@ npm run serve
 
 ### 组件
 
-- 每个组件必须包含
-  - demo
-    - index.js
-    - index.vue
-  - index.vue
-  - index.scss
+* 新建分支，`npm run create -- --name ui-components-name`，请勿重复命名
+  * 组件命名规则 - `小驼峰`
+  * UI风格 - 待定`默认橙色系 - UI设计规范`
+  * 每个组件必须包含：
+    * `demo`
+    * `unit test` - 单元测试在根目录下test/unit/ui-components-name.spec.js,新建组件会自动生成，但是需要自行补充测试用例
+    * `index.vue`
+    * `index.scss`
+      * 优先提取公共样式至 `style/*.scss`
+      * [使用BEM规范](https://www.w3cplus.com/css/css-architecture-1.html)
+      * [使用命名空间](https://www.w3cplus.com/css/css-architecture-2.html)
+* 组件测试跑通，demo运行正常即可合并
+  * 测试：`mocha` & `chai`
+* 工具类的代码更新请新建单独分支，不要和组件开发混在一起
+
+* packages所有组件下的组件测试都在tests/unit下，`请自行补充测试用例代码`
+  * [vue-cli:test:unit默认路径分离不是必要的](https://github.com/vuejs/vue-cli/issues/1245)
+  * [@vue/cli-plugin-unit-mocha](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-unit-mocha)
+
+* 部分主要npm包的使用说明
+  * 样式单独抽离postcss - `vue cli3默认使用了postcss,只需提供一个配置文件即可`
+    * [详见vue-cli3 postcss配置说明](https://cli.vuejs.org/zh/guide/css.html#postcss)
+    * 参考官网配置 [postcss-loader](https://github.com/postcss/postcss)
