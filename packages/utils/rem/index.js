@@ -1,17 +1,16 @@
-// 布局缩放基数
-const baseRate = 50
-// 设计图宽度
-const designWidth = 750
-
-/**
- * 根元素 html font-size 设置方法
- * @param {Number} baseWidth 设计值
- * @param {Number} rate 布局缩放基数
- */
-export default function (baseWidth = designWidth, rate = baseRate) {
-  function setHtmlFontSize () {
-    let screenWidth = window.innerWidth
-    let fontSize = screenWidth / baseWidth * rate
+// var _rate = 100
+export default function(baseWidth, baseRate) {
+  if (baseWidth === void 0) {
+    baseWidth = 375
+  }
+  if (baseRate === void 0) {
+    baseRate = 100
+  }
+  function setHtmlFontSize() {
+    var screenWidth = window.innerWidth
+    console.log(screenWidth, baseWidth, baseRate)
+    var fontSize = (screenWidth / baseWidth) * baseRate
+    console.log(fontSize)
     document.documentElement.style.fontSize = fontSize + 'px'
   }
   setHtmlFontSize()
