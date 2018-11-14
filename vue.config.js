@@ -79,8 +79,6 @@ module.exports = {
   },
   // 是否生成 .js.map 文件
   productionSourceMap: false,
-  // 需要 babel 转码的 node 模块
-  transpileDependencies: ['knife'],
   // css 文件处理配置
   css: {
     // 是否提取 css 文件到单独的文件中，开发环境不要开启，否则样式热更新不可用
