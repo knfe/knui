@@ -63,9 +63,8 @@ npm run cover
   * coverage
   * .nyc_output
 
-* npm publish
+* npm publish,[kn-ui@0.1.0已发布](https://www.npmjs.com/package/kn-ui)
   1. [注册](https://www.npmjs.com/signup)
   2. `npm adduser` 运行
-  3. `npm init`生成标准package.json文件参考
-  4. `npm publish`发布
-
+  3. `cd kn-ui`,`npm login`登录
+  4. 修改版本号后`npm publish`发布
