@@ -40,13 +40,15 @@ process.env.VUE_APP_ENV_CUSTOM = process.env.VUE_APP_ENV_CUSTOM || ''
 const isCoverage = process.env.VUE_APP_ENV_CUSTOM === 'coverage'
 module.exports = {
   chainWebpack: config => {
-    isCoverage ? config.module
-      .rule('js|ts')
-      .test(/\.(js|ts)/)
-      .include.add(resolve('packages'))
-      .use('istanbul-instrumenter-loader')
+    if (isCoverage) {
+      config.module
+        .rule('js|ts')
+        .test(/\.(js|ts)/)
+        .include.add(resolve('packages'))
+        .use('istanbul-instrumenter-loader')
         .loader('istanbul-instrumenter-loader')
-        .end() : []
+        .end()
+    }
   }
 }
 ```
