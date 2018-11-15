@@ -67,12 +67,12 @@ npm run serve
 
 ### 组件
 
-* 新建分支，`npm run create -- --name ui-components-name`，请勿重复命名
+* 新建分支，`npm run create -- --name uiComponentsName`，请勿重复命名
   * 组件命名规则 - `小驼峰`
   * UI风格 - 待定`默认橙色系 - UI设计规范`
   * 每个组件必须包含：
     * `demo`
-    * `unit test` - 单元测试在根目录下test/unit/ui-components-name.spec.js,新建组件会自动生成，但是需要自行补充测试用例
+    * `unit test` - 单元测试在根目录下test/unit/uiComponentsName.spec.js,新建组件会自动生成，但是需要自行补充测试用例
     * `index.vue`
     * `index.scss`
       * 优先提取公共样式至 `style/*.scss`
