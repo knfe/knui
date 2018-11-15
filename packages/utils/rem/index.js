@@ -1,4 +1,3 @@
-// var _rate = 100
 export default function(baseWidth, baseRate) {
   if (baseWidth === void 0) {
     baseWidth = 375
