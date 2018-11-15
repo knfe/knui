@@ -1,6 +1,9 @@
 /**
  * kn-button component style
  */
+// 引入全局公共变量
+@import "../style/_global.scss";
 
-// .kn-button {
-// }
+.kn-button {
+  background: $kn-cl-primary;
+}

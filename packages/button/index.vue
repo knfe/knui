@@ -1,9 +1,9 @@
 <template>
-<button class="kn-button" :class="[`kn-button--${type}`, `kn-button--${size}`, {
-  'is-plain': plain
-}]" :disabled="disabled" @click="btnClick">
-  <slot></slot>
-</button>
+  <button class="kn-button" :class="[`kn-button--${type}`, `kn-button--${size}`, {
+    'is-plain': plain
+  }]" :disabled="disabled" @click="btnClick">
+    <slot></slot>
+  </button>
 </template>
 <script>
 /**
@@ -65,5 +65,5 @@ export default{
 }
 </script>
 <style lang="scss">
-  @import "./index.scss"
+  @import "./index.scss";
 </style>
