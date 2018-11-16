@@ -17,6 +17,10 @@ export default {
 }
 </script>
 <style lang="scss">
-.kn-button-demo {
+@import '../../utils/rem/sass.scss';
+button {
+  display: block;
+  width: px2rem(50);
+  height: px2rem(40);
 }
 </style>
