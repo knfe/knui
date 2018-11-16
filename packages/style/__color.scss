@@ -1,16 +1,64 @@
 // 颜色文件
 
-// 带上钱主题色
-$color-primary: #ff7015;
-$color-secondary1: #ffb500;
-$color-secondary2: #6fc93e;
-$color-default: #333;
-$color-tertiary: #999;
-$color-placeholder: #bababa;
-$color-light: #e4e4e4;
-$color-link: #4a90e2;
-$color-important: #ff6262;
-$color-danger: #f00;
-$color-success: #69c959;
-$color-warning: #ffb844;
-$color-bg-default: #f8f8f8; 
+// 所有颜色变量
+$kn-cl-primary: #ff7015; // 主题色
+$kn-cl-secondary1: #ffb500; // 辅助色
+$kn-cl-secondary2: #6fc93e; // 辅助色
+$kn-cl-default: #333; // 暗灰（标题，重要）
+$kn-cl-tertiary: #999; // 中灰（副标题）
+$kn-cl-placeholder: #bababa; // 浅灰,输入内容占位提示
+$kn-cl-disabled: #e4e4e4; // 淡灰（不可点击）
+$kn-cl-link: #4a90e2; // 链接颜色
+$kn-cl-important: #ff6262; // 重要提示 - 辅助色
+$kn-cl-danger: #f00; // 危险操作
+$kn-cl-success: #69c959; // 成功操作
+$kn-cl-warning: #ffb844; // 警告
+$kn-cl-bg: #f8f8f8; // 默认背景色
+$kn-cl-btn-active: #f06700; // 按钮激活颜色
+
+/**
+* 全局颜色相关样式：
+* .cl 开头
+*/
+.cl-primary {
+  color: #ff7015;
+}
+.cl-secondary1 {
+  color: #ffb500;
+}
+.cl-secondary2 {
+  color: #6fc93e;
+}
+.cl-default {
+  color: #333;
+}
+.cl-tertiary {
+  color: #999;
+}
+.cl-placeholder {
+  color: #bababa;
+}
+.cl-disabled {
+  color: #e4e4e4;
+}
+.cl-link {
+  color: #4a90e2;
+}
+.cl-important {
+  color: #ff6262;
+}
+.cl-danger {
+  color: #f00;
+}
+.cl-success {
+  color: #69c959;
+}
+.cl-warning {
+  color: #ffb844;
+}
+.cl-bg {
+  color: #f8f8f8;
+}
+.cl-btn-active {
+  color: #f06700;
+}
