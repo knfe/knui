@@ -1,11 +1,16 @@
 <template>
-  <div class="kn-button-demo">
-    <h1>button demo</h1>
+  <div>
+    <kn-button>默认button</kn-button>
   </div>
 </template>
 <script>
+import knButton from '../index'
 export default {
-  name: 'kn-button-demo',
+  name: 'app',
+  components: {
+    // eslint-disable-next-line
+    knButton
+  },
   data () {
     return {
       msg: 'button!'
@@ -14,6 +19,4 @@ export default {
 }
 </script>
 <style lang="scss">
-.kn-button-demo {
-}
 </style>
