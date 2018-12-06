@@ -34,7 +34,7 @@ export default{
           'success',
           'warning',
           'danger'
-        ].indexOf(value) > -1
+        ].includes(value)
       }
     },
     size: {
@@ -45,7 +45,7 @@ export default{
           'normal',
           'small',
           'large'
-        ].indexOf(value) > -1
+        ].includes(value)
       }
     },
     plain: {

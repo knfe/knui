@@ -4,6 +4,17 @@
 // 引入全局公共变量
 @import "../style/index.scss";
 
+@mixin button {
+  display: block;
+  width: 90%;
+  height: px2rem(44);
+  margin: 0 auto;
+  color: #fff;
+  border-radius: px2rem(22);
+  font-size: 18px;
+}
+
 .kn-button {
+  @include button();
   background: $kn-cl-primary;
 }

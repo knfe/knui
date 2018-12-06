@@ -41,10 +41,14 @@ section {
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  height: 100%;
+}
 
 /*初始化body字体大小*/
 body {
   font: 12px/1.5 'PingFang SC', '宋体', Tahoma, Arial, sans-serif;
+  height: 100%;
   color: #555;
   background-color: #f7f7f7;
 }
