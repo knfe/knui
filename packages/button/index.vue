@@ -26,10 +26,9 @@ export default{
   props: {
     type: {
       type: String,
-      default: 'default',
+      default: 'primary',
       validator(value) {
         return [
-          'default',
           'primary',
           'success',
           'warning',
@@ -44,7 +43,8 @@ export default{
         return [
           'normal',
           'small',
-          'large'
+          'large',
+          'middle'
         ].includes(value)
       }
     },
