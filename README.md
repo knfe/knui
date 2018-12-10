@@ -4,7 +4,7 @@
 ## LICENSE
 [MIT](https://zh.wikipedia.org/wiki/MIT%E8%A8%B1%E5%8F%AF%E8%AD%89)
 
-# 安装(0.2.0)
+# 安装
   * npm
 
 ```bash

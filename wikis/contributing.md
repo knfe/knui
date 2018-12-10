@@ -90,3 +90,10 @@ npm run serve
   * 样式单独抽离postcss - `vue cli3默认使用了postcss,只需提供一个配置文件即可`
     * [详见vue-cli3 postcss配置说明](https://cli.vuejs.org/zh/guide/css.html#postcss)
     * 参考官网配置 [postcss-loader](https://github.com/postcss/postcss)
+
+* 发布新版本
+    * 更新版本号
+    * 更新dist包`npm run build:packages`
+    * 提交代码
+    * npm login 输入用户名密码邮箱
+    * npm publish
