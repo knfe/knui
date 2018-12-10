@@ -56,7 +56,7 @@ module.exports = {
   pages: {
     index: {
       // page 的入口
-      entry: 'packages/index.js'
+      entry: './packages/button/demo/index.js'
     }
   },
   chainWebpack: config => {

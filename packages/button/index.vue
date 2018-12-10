@@ -26,15 +26,14 @@ export default{
   props: {
     type: {
       type: String,
-      default: 'default',
+      default: 'primary',
       validator(value) {
         return [
-          'default',
           'primary',
           'success',
           'warning',
           'danger'
-        ].indexOf(value) > -1
+        ].includes(value)
       }
     },
     size: {
@@ -44,8 +43,9 @@ export default{
         return [
           'normal',
           'small',
-          'large'
-        ].indexOf(value) > -1
+          'large',
+          'middle'
+        ].includes(value)
       }
     },
     plain: {
