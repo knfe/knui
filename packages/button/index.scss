@@ -7,10 +7,10 @@
 @mixin button {
   display: block;
   width: 90%;
-  height: px2rem(44);
+  height: 44px;
   margin: 0 auto;
   color: #fff;
-  border-radius: px2rem(22);
+  border-radius: 22px;
   font-size: 18px;
 }
 
@@ -25,11 +25,6 @@
 .kn-button--small {
   width: 40%;
   font-size: 14px;
-}
-.is-plain {
-  color: $kn-cl-default;
-  background: rgba($color: #fff, $alpha: 0);
-  border: 1px solid $kn-cl-primary;
 }
 /**
 * 复写浏览器默认样式button disabled
@@ -53,4 +48,21 @@ button:disabled {
 
 .kn-button--danger {
   background: #f00;
+}
+.is-plain {
+  color: $kn-cl-default;
+  background: rgba($color: #fff, $alpha: 0);
+  border: 1px solid $kn-cl-primary;
+}
+.is-plain.kn-button--success {
+  color: #0f0;
+  border: 1px solid #0f0;
+}
+.is-plain.kn-button--warning {
+  color: #ff0;
+  border: 1px solid #ff0;
+}
+.is-plain.kn-button--danger {
+  color: #f00;
+  border: 1px solid #f00;
 }

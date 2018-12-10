@@ -38,10 +38,9 @@ export default{
     },
     size: {
       type: String,
-      default: 'normal',
+      default: 'large',
       validator(value) {
         return [
-          'normal',
           'small',
           'large',
           'middle'
