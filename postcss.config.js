@@ -1,18 +1,18 @@
 module.exports = {
   plugins: [
-    require('precss'),
+    // require('precss'),
     require('autoprefixer')
   ],
-  'features': {
-    'bem': {
-      'shortcuts': {
-        'component': 'b',
-        'modifier': 'm',
-        'descendent': 'e'
+  features: {
+    bem: {
+      shortcuts: {
+        component: 'b',
+        modifier: 'm',
+        descendent: 'e'
       },
-      'separators': {
-        'descendent': '__',
-        'modifier': '--'
+      separators: {
+        descendent: '__',
+        modifier: '--'
       }
     }
   }

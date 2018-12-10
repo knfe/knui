@@ -11,7 +11,7 @@ const version = '0.1.0'
 
 // init components
 const components = [KnButton, KnPullRefresh]
-const install = function (Vue) {
+const install = function(Vue) {
   if (install.installed) return
   components.map(component => Vue.component(component.name, component))
 }

@@ -2,8 +2,55 @@
  * kn-button component style
  */
 // 引入全局公共变量
-@import "../style/_global.scss";
+@import "../style/index.scss";
+
+@mixin button {
+  display: block;
+  width: 90%;
+  height: px2rem(44);
+  margin: 0 auto;
+  color: #fff;
+  border-radius: px2rem(22);
+  font-size: 18px;
+}
 
 .kn-button {
-  // background: $kn-cl-primary;
+  @include button();
+  background: $kn-cl-primary;
+}
+.kn-button--middle {
+  width: 75%;
+  font-size: 16px;
+}
+.kn-button--small {
+  width: 40%;
+  font-size: 14px;
+}
+.is-plain {
+  color: $kn-cl-default;
+  background: rgba($color: #fff, $alpha: 0);
+  border: 1px solid $kn-cl-primary;
+}
+/**
+* 复写浏览器默认样式button disabled
+*/
+button:disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  opacity: .65;    
+}
+
+.kn-button--success {
+  background: #0f0;
+}
+
+.kn-button--warning {
+  background: #ff0;
+}
+
+.kn-button--danger {
+  background: #f00;
 }

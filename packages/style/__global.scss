@@ -7,3 +7,97 @@
 $htmlFontSize: 100;
 $htmlFontSizeVal: $htmlFontSize * 1px;
 $htmlMaxWidth: 768px;
+
+/**
+ * 字体大小 10 号到 70 号字
+ */
+
+@for $i from 10 through 70 {
+  .g-fs#{$i} {
+    font-size: px2rem($i);
+  }
+}
+
+/**
+ * margin-top 2 rem到 120 rem
+ */
+@for $i from 0 through 120 {
+  .g-mt#{$i} {
+    margin-top: px2rem($i) !important;
+  }
+}
+
+/**
+ * margin-bottom 2 rem到 120 rem
+ */
+@for $i from 0 through 120 {
+  .g-mb#{$i} {
+    margin-bottom: px2rem($i) !important;
+  }
+}
+
+/**
+ * margin-right 2 rem到 120 rem
+ */
+@for $i from 0 through 120 {
+  .g-mr#{$i} {
+    margin-right: px2rem($i) !important;
+  }
+}
+
+/**
+ * margin-left 2 rem到 120 rem
+ */
+@for $i from 0 through 120 {
+  .g-ml#{$i} {
+    margin-left: px2rem($i) !important;
+  }
+}
+
+/**
+ * padding-top 2 rem到 120 rem
+ */
+@for $i from 2 through 120 {
+  .g-pt#{$i} {
+    padding-top: px2rem($i);
+  }
+}
+
+/**
+ * padding-bottom 2 rem到 120 rem
+ */
+@for $i from 2 through 120 {
+  .g-pb#{$i} {
+    padding-bottom: px2rem($i);
+  }
+}
+
+/**
+ * padding-right 2 rem到 120 rem
+ */
+@for $i from 2 through 120 {
+  .g-pr#{$i} {
+    padding-right: px2rem($i);
+  }
+}
+
+/**
+ * padding-left 2 rem到 120 rem
+ */
+@for $i from 2 through 120 {
+  .g-pl#{$i} {
+    padding-left: px2rem($i);
+  }
+}
+
+.g-tac {
+  text-align: center;
+}
+
+.g-tal {
+  text-align: left;
+}
+
+.g-tar {
+  text-align: right;
+}
