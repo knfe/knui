@@ -19,5 +19,7 @@
   * select - wjwalker
   * piker3 - wujinrong
   * dropdown - wjwalker
-  * swipe - kerentang
+  * pullrefresh - keno
+  * pullloading - keno
+  * swipe - keno
   * option - wjwalker
