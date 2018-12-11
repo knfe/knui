@@ -1,24 +1,38 @@
 <template>
   <div class="kn-pullrefresh-demo">
-    xxxxx
-    <app></app>
+    <pull-refresh v-model="isLoading" @refresh="onRefresh">
+      <div class="content"></div>
+    </pull-refresh>
   </div>
 </template>
 <script>
-import app from '../index.vue'
+import PullRefresh from '../index.vue'
+import { setTimeout } from 'timers'
 export default {
-  name: 'kn-pullrefresh-demo',
+  name: 'kn-pullrefresP-demo',
   data() {
     return {
-      msg: 'kn-pullrefresh-demo'
+      isLoading: false
+    }
+  },
+  methods: {
+    onRefresh() {
+      setTimeout(() => {
+        this.isLoading = false
+      }, 2000)
     }
   },
   components: {
-    app
+    PullRefresh
   }
 }
 </script>
 <style lang="scss">
 .kn-pullrefresh-demo {
+  .content {
+    width: 100%;
+    height: 1000px;
+    background-color: red;
+  }
 }
 </style>
