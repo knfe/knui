@@ -22,5 +22,7 @@
   * piker3
   * form
   * dropdown
-  * swipe
+  * pullrefresh - keno
+  * pullloading - keno
+  * swipe - keno
   * option

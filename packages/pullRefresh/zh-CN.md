@@ -43,8 +43,8 @@ export default {
 | 参数               | 说明         | 类型      | 默认值            | 版本 |
 | ------------------ | ------------ | --------- | ----------------- | ---- |
 | v-model            | 是否在加载中 | `Boolean` | -                 | -    |
-| pulling-text       | 释放过程文案 | `String`  | `下拉即可刷新...` | -    |
-| loosing-text       | 是否禁用按钮 | `String`  | `释放即可刷新...` | -    |
+| pulling-text       | 释放过程文案 | `String`  | `下拉即可刷新` | -    |
+| loosing-text       | 是否禁用按钮 | `String`  | `释放即可刷新` | -    |
 | loading-text       | 加载过程文案 | `String`  | `加载中...`       | -    |
 | animation-duration | 动画时长     | `Number`  | `300`             | -    |
 | head-height        | 顶部内容高度 | `Number`  | `50`              | -    |
