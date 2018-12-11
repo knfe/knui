@@ -18,7 +18,7 @@ if (!packageName) {
 }
 const glob = require('glob')
 const fs = require('fs')
-const packageNames = []
+let packageNames = []
 const packageNamesFilter = ['style']
 glob.sync(path.resolve(packagePath, './*')).forEach(el => {
   if (fs.statSync(el).isDirectory()) {
@@ -62,6 +62,10 @@ let indexStr = `/**
 // import packages
 `
 let keys = []
+// 过滤掉utils文件夹
+packageNames = packageNames.filter(function(elm) {
+  return elm !== 'utils'
+})
 packageNames.forEach(el => {
   let key = 'Kn' + el.substring(0, 1).toUpperCase() + el.substring(1, el.length)
   indexStr += `import ${key} from './${el}/index.vue'\n`
