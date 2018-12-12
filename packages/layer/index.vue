@@ -10,7 +10,7 @@
           </slot>
         </div>
         <div class="kn-layer--footer g-hairline--top">
-          <kn-button :plain="true" :size="'small'" :round="false" @click="close">cancel</kn-button>
+          <kn-button :plain="true" :size="'small'" :round="false" @click="close" v-if="type !== 'tip'">cancel</kn-button>
           <kn-button :size="'small'" :round="false" @click="comfirm">confirm</kn-button>
         </div>
       </div>

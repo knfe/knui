@@ -3,9 +3,9 @@
     <kn-button class="g-mb40 g-mt40" :size="'small'" @click="tip">消息提示</kn-button>
     <kn-button class="g-mb40" :size="'small'" @click="comfirm">消息确认</kn-button>
     <kn-button class="g-mb40" :size="'small'" @click="prompt">对话框</kn-button>
-    <d-dialog :isShow="showTip" :title="'title'" :content="'content'" @close="closeTip" @comfirm="comfirmTip"></d-dialog>
-    <d-dialog :isShow="showComfirm" :type="'comfirm'"></d-dialog>
-    <d-dialog :isShow="showPrompt" :type="'prompt'"></d-dialog>
+    <d-dialog :isShow="showTip" :title="'title-tip'" :content="'content-tip'" @close="closeTip" @comfirm="comfirmTip"></d-dialog>
+    <d-dialog :isShow="showComfirm" :type="'comfirm'" :title="'title-comfirm'" :content="'content-comfirm'" @close="closeComfirm" @comfirm="comfirmComfirm"></d-dialog>
+    <d-dialog :isShow="showPrompt" :type="'prompt'" :title="'title-prompt'" :content="'content-prompt'" @close="closePrompt" @comfirm="comfirmPrompt"></d-dialog>
   </div>
 </template>
 <script>
@@ -39,6 +39,18 @@ export default {
     },
     comfirmTip(evt) {
       this.showTip = false
+    },
+    closeComfirm() {
+      this.showComfirm = false
+    },
+    comfirmComfirm() {
+      this.showComfirm = false
+    },
+    closePrompt() {
+      this.showPrompt = false
+    },
+    comfirmPrompt() {
+      this.showPrompt = false
     }
   }
 }

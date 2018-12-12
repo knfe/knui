@@ -11,6 +11,15 @@
   left: 0;
   bottom: 0;
 }
+.kn-layer-bounce-enter {
+  opacity: 0;
+  transform: translate3d(-50%, -50%, 0) scale(0.7);
+}
+
+.kn-layer-bounce-leave-active {
+  opacity: 0;
+  transform: translate3d(-50%, -50%, 0) scale(0.9);
+}
 .kn-layer--box {
   position: absolute;
   left: 50%;
@@ -29,7 +38,11 @@
   .kn-layer--title {
     font-size: 18px;
   }
-  
+}
+.kn-layer--tip {
+  .kn-button {
+    width: 100%;
+  }
 }
 .kn-layer--mask {
   position: fixed;
@@ -42,6 +55,7 @@
 .kn-layer--content {
   padding: 0 20px 20px;
   max-height: 100px;
+  font-size: 14px;
   overflow: hidden;
 }
 .kn-layer--footer {
