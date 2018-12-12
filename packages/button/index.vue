@@ -1,7 +1,5 @@
 <template>
-  <button class="kn-button" :class="[`kn-button--${type}`, `kn-button--${size}`, {
-    'is-plain': plain
-  }]" :disabled="disabled" @click="btnClick">
+  <button class="kn-button" :class="[`kn-button--${type}`, `kn-button--${size}`, { 'is-plain': plain }, {'is-round': round}]" :disabled="disabled" @click="btnClick">
     <slot></slot>
   </button>
 </template>
@@ -54,6 +52,10 @@ export default{
     disabled: {
       type: Boolean,
       default: false
+    },
+    round: {
+      type: Boolean,
+      default: true
     }
   },
   methods: {
