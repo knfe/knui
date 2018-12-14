@@ -47,6 +47,9 @@ npm run serve
 | | | |____ index.js 示例入口文件
 | | | |____ index.vue 示例组件
 | | | |____ index.html 示例组件 html 文件（可选）
+| | |____ test 组件测试文件
+| | | |____ index.spec.js 测试用例
+| | | |____ __snapshots__ 测试快照
 | | |____ zn-CN.md 组件说明（中文）
 | | |____ en-US.md 组件说明（English）
 | | |____ index.scss 组件样式文件
@@ -79,12 +82,12 @@ npm run serve
       * [使用BEM规范](https://www.w3cplus.com/css/css-architecture-1.html)
       * [使用命名空间](https://www.w3cplus.com/css/css-architecture-2.html)
 * 组件测试跑通，demo运行正常即可合并
-  * 测试：`mocha` & `chai`
+  * 测试：`jest`
 * 工具类的代码更新请新建单独分支，不要和组件开发混在一起
 
-* packages所有组件下的组件测试都在tests/unit下，`请自行补充测试用例代码`
-  * [vue-cli:test:unit默认路径分离不是必要的](https://github.com/vuejs/vue-cli/issues/1245)
-  * [@vue/cli-plugin-unit-mocha](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-unit-mocha)
+* packages所有组件下的组件测试都在当前文件夹下的test/index.spec.js中，`请自行补充测试用例代码`
+  * [jest](https://jestjs.io/zh-Hans/)
+  * [Vue Test Utils](https://vue-test-utils.vuejs.org/zh/)
 
 * 部分主要npm包的使用说明
   * 样式单独抽离postcss - `vue cli3默认使用了postcss,只需提供一个配置文件即可`
