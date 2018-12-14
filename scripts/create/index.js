@@ -37,6 +37,7 @@ packageNames.push(packageName)
 const template = require('./template')
 fs.mkdirSync(path.resolve(packagePath, './' + packageName))
 fs.mkdirSync(path.resolve(packagePath, './' + packageName + '/demo'))
+fs.mkdirSync(path.resolve(packagePath, './' + packageName + '/test'))
 const data = {
   namespace: 'kn-' + packageName,
   demo: {
