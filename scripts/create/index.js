@@ -7,7 +7,6 @@ const argv = require('minimist')(process.argv.slice(2))
 
 // package path
 const packagePath = path.resolve(process.cwd(), './packages')
-const testUnitPath = path.resolve(process.cwd(), './tests/unit')
 
 // package name
 const packageName = typeof argv.name === 'boolean' ? '' : (argv.name || '').trim().toLowerCase()
@@ -38,6 +37,7 @@ packageNames.push(packageName)
 const template = require('./template')
 fs.mkdirSync(path.resolve(packagePath, './' + packageName))
 fs.mkdirSync(path.resolve(packagePath, './' + packageName + '/demo'))
+fs.mkdirSync(path.resolve(packagePath, './' + packageName + '/test'))
 const data = {
   namespace: 'kn-' + packageName,
   demo: {
@@ -101,25 +101,6 @@ export default {
 }
 `
 fs.writeFileSync(path.resolve(packagePath, './index.js'), indexStr)
-
-let testsUnitStr = `
-import { expect } from 'chai'
-import { shallowMount } from '@vue/test-utils'
-import ${packageName} from '../../packages/${packageName}'
-
-describe('${packageName}.vue', () => {
-  it('renders props.msg when passed', () => {
-    // 以下的测试内容需要修改，否则会测试失败，之所以写上这些测试内容是为了避免eslint报错
-    const type = 'danger'
-    const wrapper = shallowMount(${packageName}, {
-      propsData: { type }
-    })
-    expect(wrapper.props('type')).to.equal('danger')
-  })
-})
-`
-
-fs.writeFileSync(path.resolve(testUnitPath, `./${packageName}.spec.js`), testsUnitStr)
 
 // complete
 console.log('The ' + packageName + ' component package already created!')
