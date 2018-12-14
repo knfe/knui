@@ -1,12 +1,16 @@
+const { BABEL_MODULE, NODE_ENV } = process.env
+const useESModules = BABEL_MODULE !== 'commonjs' && NODE_ENV !== 'test' // babel模块和test环境使用commonjs
 module.exports = {
   presets: [
-    '@vue/app'
+    // 预设置
+    [
+      '@babel/preset-env',
+      {
+        modules: useESModules ? false : 'commonjs'
+      }
+    ]
   ],
   plugins: [
-    ['import', {
-      libraryName: 'knui',
-      libraryDirectory: 'es',
-      style: true
-    }]
+    '@babel/plugin-syntax-dynamic-import'
   ]
 }
