@@ -15,7 +15,9 @@
     "build:packages": "vue-cli-service build --target lib --name lib packages/index.js",
     "lint": "vue-cli-service lint",
     "create": "node ./scripts/create/",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "open tests/coverage/index.html"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
