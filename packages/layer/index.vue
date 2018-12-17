@@ -1,16 +1,29 @@
 <template>
   <transition name="kn-layer-bounce">
-    <div class="kn-layer" v-show="isShow">
+    <div class="kn-layer" v-if="isShow">
       <div class="kn-layer--mask"></div>
       <div class="kn-layer--box g-tac" :class="[`kn-layer--${type}`]">
         <div class="kn-layer--title" v-if="title" v-text="title"></div>
-        <div class="kn-layer--content g-tal" v-if="content">
+        <div class="kn-layer--content g-tal" v-show="content">
           <slot>
-            <div v-if="content" v-html="content" :class="[title ? 'has-title' : '']"></div>
+            <div
+              v-show="content && type !== 'prompt'"
+              v-html="content"
+              :class="[title ? 'has-title' : '']"
+            ></div>
+            <div v-show="content && type === 'prompt'" :class="[title ? 'has-title' : '']">
+              <input ref="input" type="text" class="kn-layer--input" :placeholder="placeholderText">
+            </div>
           </slot>
         </div>
         <div class="kn-layer--footer g-hairline--top">
-          <kn-button :plain="true" :size="'small'" :round="false" @click="close" v-if="type !== 'tip'">cancel</kn-button>
+          <kn-button
+            :plain="true"
+            :size="'small'"
+            :round="false"
+            @click="close"
+            v-if="type !== 'tip'"
+          >cancel</kn-button>
           <kn-button :size="'small'" :round="false" @click="comfirm">confirm</kn-button>
         </div>
       </div>
@@ -36,11 +49,7 @@ export default {
       type: String,
       default: 'tip',
       validator(value) {
-        return [
-          'tip',
-          'comfirm',
-          'prompt'
-        ].includes(value)
+        return ['tip', 'comfirm', 'prompt'].includes(value)
       }
     },
     title: {
@@ -50,6 +59,10 @@ export default {
     content: {
       type: String,
       default: ''
+    },
+    placeholderText: {
+      type: String,
+      default: ''
     }
   },
   methods: {
@@ -57,7 +70,19 @@ export default {
       this.$emit('comfirm', evt)
     },
     close(evt) {
-      this.$emit('close', evt)
+      this.$emit('input', false)
+    }
+  },
+  mounted() {
+    console.log('1111')
+  },
+  watch: {
+    isShow(nv) {
+      if (nv) {
+        this.$nextTick(() => {
+          this.$refs.input.focus()
+        })
+      }
     }
   }
 }

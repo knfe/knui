@@ -5,7 +5,7 @@
     <kn-button class="g-mb40" :size="'small'" @click="prompt">对话框</kn-button>
     <d-dialog :isShow="showTip" :title="'title-tip'" :content="'content-tip'" @close="closeTip" @comfirm="comfirmTip"></d-dialog>
     <d-dialog :isShow="showComfirm" :type="'comfirm'" :title="'title-comfirm'" :content="'content-comfirm'" @close="closeComfirm" @comfirm="comfirmComfirm"></d-dialog>
-    <d-dialog :isShow="showPrompt" :type="'prompt'" :title="'title-prompt'" :content="'content-prompt'" @close="closePrompt" @comfirm="comfirmPrompt"></d-dialog>
+    <d-dialog v-show="show1" :isShow="showPrompt" :type="'prompt'" :title="'title-prompt'" :content="'content-prompt'" @close="closePrompt" @comfirm="comfirmPrompt"></d-dialog>
   </div>
 </template>
 <script>
@@ -17,7 +17,8 @@ export default {
     return {
       showTip: false,
       showComfirm: false,
-      showPrompt: false
+      showPrompt: false,
+      show1: 0
     }
   },
   components: {
