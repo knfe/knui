@@ -18,7 +18,7 @@ if (!packageName) {
 const glob = require('glob')
 const fs = require('fs')
 let packageNames = []
-const packageNamesFilter = ['style']
+const packageNamesFilter = ['style', 'assets']
 glob.sync(path.resolve(packagePath, './*')).forEach(el => {
   if (fs.statSync(el).isDirectory()) {
     let tmp = el.split('/')

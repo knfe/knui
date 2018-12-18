@@ -1,6 +1,9 @@
 <template>
   <div class="kn-cell-demo">
-    <app></app>
+    <app :title="'学信网认证'" :value="'已认证'"></app>
+    <app :title="'学信网认证'" :value="'已认证'" is-link></app>
+    <app :title="'学信网认证'" :value="'已认证'" is-select></app>
+    <app :title="'学信网'" :value="'已认证'" is-select :title-label="'未认证可能导致失败'"></app>
   </div>
 </template>
 <script>
