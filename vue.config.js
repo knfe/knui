@@ -56,7 +56,7 @@ module.exports = {
   pages: {
     index: {
       // page 的入口
-      entry: './packages/pullRefresh/demo/index.js'
+      entry: './packages/icon/demo/index.js'
     }
   },
   chainWebpack: config => {

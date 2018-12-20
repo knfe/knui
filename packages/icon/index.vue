@@ -1,5 +1,5 @@
 <template>
-  <div class="kn-icon">{{msg}}</div>
+  <div class="kn-icon" :class="[`icon-${icon}`, iconSize]" :style="style"></div>
 </template>
 <script>
 export default {
@@ -8,6 +8,96 @@ export default {
     return {
       msg: 'hello kn-icon'
     }
+  },
+  props: {
+    iconSize: {
+      type: String,
+      default: 'normal'
+    },
+    icon: {
+      type: String,
+      default: 'face'
+    }
+  },
+  computed: {
+    style() {
+      return {}
+    }
   }
 }
 </script>
+<style lang="scss" scoped>
+// 引入全局公共变量
+@import '../style/index.scss';
+.kn-icon {
+  display: inline-block;
+  width: px2rem(22);
+  height: px2rem(22);
+}
+
+.small {
+  width: px2rem(13);
+  height: px2rem(13);
+}
+
+.icon-city {
+  background: url('../assets/icon/icon-city.png') center center no-repeat;
+  background-size: contain;
+}
+
+.icon-face {
+  background: url('../assets/icon/icon-face.png') center center no-repeat;
+  background-size: contain;
+}
+
+.icon-location {
+  background: url('../assets/icon/icon-location.png') center center no-repeat;
+  background-size: contain;
+}
+
+.icon-user {
+  background: url('../assets/icon/icon-user.png') center center no-repeat;
+  background-size: contain;
+}
+
+.icon-info {
+  background: url('../assets/icon/icon-info.png') center center no-repeat;
+  background-size: contain;
+}
+
+.icon-phone {
+  background: url('../assets/icon/icon-phone.png') center center no-repeat;
+  background-size: contain;
+}
+
+.icon-chsi {
+  background: url('../assets/icon/icon-chsi.png') center center no-repeat;
+  background-size: contain;
+}
+
+.icon-lock-on {
+  background: url('../assets/icon/lock-on.png') center center no-repeat;
+  background-size: contain;
+}
+
+.icon-contact {
+  background: url('../assets/icon/icon-contact.png') center center no-repeat;
+  background-size: contain;
+}
+
+.icon-relation {
+  background: url('../assets/icon/icon-relation.png') center center no-repeat;
+  background-size: contain;
+}
+
+.icon-arrow-right {
+  background: url('../assets/icon/arrow-right.png') center center no-repeat;
+  background-size: contain;
+}
+
+.icon-arrow-down {
+  background: url('../assets/icon/arrow-right.png') center center no-repeat;
+  background-size: contain;
+  transform: rotate(90deg);
+}
+</style>
