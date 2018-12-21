@@ -3,33 +3,25 @@
  */
 @import '../style/index.scss';
 
-// line-height 布局
 .kn-cell {
-  width: 100%;
-  height: px2rem(55);
-  line-height: px2rem(55);
-  background-color: #fff;
-  padding: 0 px2rem(20);
-  font-size: px2rem(30/2);
   position: relative;
-
+  box-sizing: border-box;
+  width: 100%;
+  height: px2rem(110/2);
+  padding: px2rem(33/2) px2rem(40/2);
+  font-size: px2rem(30/2);
+  line-height: px2rem(110/2);
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
   // 单元格title
   .cell-title {
-    height: px2rem(55);
-    line-height: px2rem(55);
+    height: px2rem(44/2);
+    line-height: px2rem(44/2);
 
-    // title图标
-    .title-icon {
-      width: px2rem(22);
-      line-height: px2rem(55);
-      height: px2rem(55);
-      background: url('../assets/cell/face.png') center center no-repeat;
-      background-size: contain;
-      margin-right: px2rem(4);
-    }
-    // title文字
     .title-txt {
-      height: px2rem(55);
+      height: px2rem(44/2);
+      line-height: px2rem(44/2);
 
       &::after {
         content: ' ';
@@ -40,11 +32,12 @@
         margin-top: px2rem(2);
       }
     }
+
     // title关联文字
     .title-label {
-      height: px2rem(55);
       position: relative;
-      top: px2rem(10);
+      top: 50%;
+      transform: translateY(-50%);
 
       .txt-main {
         height: px2rem(21);
@@ -59,19 +52,39 @@
         margin-top: px2rem(2);
       }
     }
+
+    .title-info {
+      width: px2rem(14);
+      height: px2rem(44/2);
+      background: url('../assets//icon/title-info.png') center center no-repeat;
+      background-size: contain;
+      margin-left: px2rem(5);
+    }
+
+    .icon-chsi-dot::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      width: px2rem(11/2);
+      height: px2rem(11/2);
+      content: '';
+      background-color: #d8d8d8;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 
   // 单元格value
   .cell-value {
-    height: px2rem(55);
-    line-height: px2rem(55);
+    height: px2rem(44/2);
+    line-height: px2rem(44/2);
 
-    // value文字
     .value-txt {
-      height: px2rem(55);
-
+      height: px2rem(44/2);
+      line-height: px2rem(44/2);
       &::after {
-        content: ' ';
+        content: '';
         display: inline-block;
         width: 0;
         height: 100%;
@@ -80,22 +93,22 @@
       }
     }
 
-    // value图标
-    .value-icon {
+    // 右箭头
+    .value-icon.is-link {
       width: px2rem(13);
-      height: px2rem(55);
-      line-height: px2rem(55);
+      height: px2rem(22);
       margin-left: px2rem(8);
+      background: url('../assets/icon/arrow-right.png') center center no-repeat;
+      background-size: px2rem(7) px2rem(13);
     }
 
-    .cell-link {
-      background: url('../assets/cell/arrow-right.png') center center no-repeat;
-      background-size: px2rem(8) px2rem(14);
-    }
-
-    .cell-select {
-      background: url('../assets/cell/arrow-down.png') center center no-repeat;
-      background-size: px2rem(14) px2rem(8);
+    // 下箭头
+    .value-icon.is-select {
+      width: px2rem(13);
+      height: px2rem(22);
+      margin-left: px2rem(8);
+      background: url('../assets/icon/arrow-down.png') center center no-repeat;
+      background-size: px2rem(13) px2rem(7);
     }
   }
 }

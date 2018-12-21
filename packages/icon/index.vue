@@ -1,5 +1,5 @@
 <template>
-  <div class="kn-icon" :class="[`icon-${icon}`, iconSize]" :style="style"></div>
+  <span class="kn-icon" :class="[`icon-${icon}`, iconSize]" :style="style"></span>
 </template>
 <script>
 export default {
