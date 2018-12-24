@@ -1,5 +1,5 @@
 <template>
-  <span class="kn-icon" :class="[`icon-${icon}`, iconSize]" :style="style"></span>
+  <span class="kn-icon" :class="[`icon-${icon}`, iconSize]"></span>
 </template>
 <script>
 export default {
@@ -17,11 +17,6 @@ export default {
     iconSize: {
       type: String,
       default: 'normal'
-    }
-  },
-  computed: {
-    style() {
-      return {}
     }
   }
 }
