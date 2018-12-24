@@ -1,5 +1,5 @@
 <template>
-  <span class="kn-icon" :class="[`icon-${icon}`, iconSize]"></span>
+  <span class="kn-icon" :class="[`icon-${icon}`, iconSize]" @click="clickIcon"></span>
 </template>
 <script>
 export default {
@@ -11,16 +11,20 @@ export default {
   },
   props: {
     icon: {
-      type: String,
-      default: 'face'
+      type: String
     },
     iconSize: {
       type: String,
       default: 'normal'
     }
+  },
+  methods: {
+    clickIcon() {
+      this.$emit('click')
+    }
   }
 }
 </script>
 <style lang="scss" scoped>
-@import './index.scss'
+@import './index.scss';
 </style>

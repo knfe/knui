@@ -18,4 +18,10 @@ describe('Icon.vue', () => {
     })
     expect(wrapper.props('iconSize')).toBe('small')
   })
+
+  test('icon click event', () => {
+    const wrapper = shallowMount(Icon)
+    wrapper.trigger('click')
+    expect(wrapper.emitted('click')).toBeTruthy()
+  })
 })
