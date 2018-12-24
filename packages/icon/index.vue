@@ -10,13 +10,13 @@ export default {
     }
   },
   props: {
-    iconSize: {
-      type: String,
-      default: 'normal'
-    },
     icon: {
       type: String,
       default: 'face'
+    },
+    iconSize: {
+      type: String,
+      default: 'normal'
     }
   },
   computed: {
