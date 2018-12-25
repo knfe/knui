@@ -4,12 +4,14 @@
 
 // import packages
 import KnButton from './button/index.vue'
+import KnUtils from './utils/index.vue'
+import KnProgress from './progress/index.vue'
 
 // package version
-const version = '0.1.0'
+const version = '0.4.0'
 
 // init components
-const components = [KnButton]
+const components = [KnButton, KnUtils, KnProgress]
 const install = function (Vue) {
   if (install.installed) return
   components.map(component => Vue.component(component.name, component))
@@ -19,7 +21,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 // export components
-export { KnButton }
+export { KnButton, KnUtils, KnProgress }
 
 // export default
 export default {
