@@ -7,7 +7,6 @@ const argv = require('minimist')(process.argv.slice(2))
 
 // package path
 const packagePath = path.resolve(process.cwd(), './packages')
-const testUnitPath = path.resolve(process.cwd(), './tests/unit')
 
 // package name
 const packageName = typeof argv.name === 'boolean' ? '' : (argv.name || '').trim().toLowerCase()
@@ -18,8 +17,8 @@ if (!packageName) {
 }
 const glob = require('glob')
 const fs = require('fs')
-const packageNames = []
-const packageNamesFilter = ['style']
+let packageNames = []
+const packageNamesFilter = ['style', 'assets']
 glob.sync(path.resolve(packagePath, './*')).forEach(el => {
   if (fs.statSync(el).isDirectory()) {
     let tmp = el.split('/')
@@ -38,6 +37,7 @@ packageNames.push(packageName)
 const template = require('./template')
 fs.mkdirSync(path.resolve(packagePath, './' + packageName))
 fs.mkdirSync(path.resolve(packagePath, './' + packageName + '/demo'))
+fs.mkdirSync(path.resolve(packagePath, './' + packageName + '/test'))
 const data = {
   namespace: 'kn-' + packageName,
   demo: {
@@ -62,6 +62,10 @@ let indexStr = `/**
 // import packages
 `
 let keys = []
+// 过滤掉utils文件夹
+packageNames = packageNames.filter(function(elm) {
+  return elm !== 'utils'
+})
 packageNames.forEach(el => {
   let key = 'Kn' + el.substring(0, 1).toUpperCase() + el.substring(1, el.length)
   indexStr += `import ${key} from './${el}/index.vue'\n`
@@ -97,25 +101,6 @@ export default {
 }
 `
 fs.writeFileSync(path.resolve(packagePath, './index.js'), indexStr)
-
-let testsUnitStr = `
-import { expect } from 'chai'
-import { shallowMount } from '@vue/test-utils'
-import ${packageName} from '../../packages/${packageName}'
-
-describe('${packageName}.vue', () => {
-  it('renders props.msg when passed', () => {
-    // 以下的测试内容需要修改，否则会测试失败，之所以写上这些测试内容是为了避免eslint报错
-    const type = 'danger'
-    const wrapper = shallowMount(${packageName}, {
-      propsData: { type }
-    })
-    expect(wrapper.props('type')).to.equal('danger')
-  })
-})
-`
-
-fs.writeFileSync(path.resolve(testUnitPath, `./${packageName}.spec.js`), testsUnitStr)
 
 // complete
 console.log('The ' + packageName + ' component package already created!')

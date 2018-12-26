@@ -101,6 +101,8 @@
         .step {
             &::after {
                 height: 1px;
+                width: 70%;
+                left: 67%;
             }
             .circle {
                 width: px2rem(20);
