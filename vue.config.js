@@ -49,7 +49,6 @@ function resolve (dir) {
 
 // 自定义运行环境
 process.env.VUE_APP_ENV_CUSTOM = process.env.VUE_APP_ENV_CUSTOM || ''
-const isCoverage = process.env.VUE_APP_ENV_CUSTOM === 'coverage'
 
 module.exports = {
   // 入口
@@ -85,16 +84,6 @@ module.exports = {
       .end()
       .use('babel')
       .loader('babel-loader')
-
-    if (isCoverage) {
-      config.module
-        .rule('js|ts')
-        .test(/\.(js|ts)/)
-        .include.add(resolve('packages'))
-        .use('istanbul-instrumenter-loader')
-        .loader('istanbul-instrumenter-loader')
-        .end()
-    }
   },
   // 是否生成 .js.map 文件
   productionSourceMap: false,
