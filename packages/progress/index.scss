@@ -69,13 +69,13 @@
                 display: block;
                 width: 100%;
                 height: 2px;
-                background: #FF7015;
+                background: $kn-cl-primary;
                 position: absolute;
                 top: px2rem(5);
                 left: 50%;
             }
             .circle {
-                background: #FF7015;
+                background: $kn-cl-primary;
             }
         }
         // 当前步骤的样式
@@ -88,7 +88,7 @@
                 width: px2rem(24);
                 height: px2rem(24);
                 background: #fff;
-                border: px2rem(9) solid #FF7015;
+                border: px2rem(9) solid $kn-cl-primary;
                 border-radius: 50%;
                 z-index: 1000;
             }
@@ -123,13 +123,13 @@
                 left: 50%;
                 top: -13%;
                 margin-left: px2rem(-9);
-                background: #FF7015;
+                background: $kn-cl-primary;
                 border: none;
                 border-radius: 50%;
                 z-index: 1000;
             }
             .text {
-                color: #FF7015;
+                color: $kn-cl-primary;
             }
         }
         .active {
@@ -137,7 +137,7 @@
                 height: 1px;
             }
             .text {
-                color: #FF7015;
+                color: $kn-cl-primary;
             }
         }
     }
