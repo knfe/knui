@@ -1,5 +1,10 @@
 <template>
   <div class="kn-progress-demo">
+    <h2 class="tip">订单进程/审核结果进度（无加速的,可自己更换颜色）</h2>
+    <kn-progress :step="0" :accelerate="false" :progressBtnText="this.progressBtnTextc1"></kn-progress>
+    <kn-progress :step="1" :accelerate="false" :progressBtnText="this.progressBtnTextc2"></kn-progress>
+    <kn-progress :step="2" :accelerate="false" :progressBtnText="this.progressBtnTextc3"></kn-progress>
+    <kn-progress :step="3" :accelerate="false" :progressBtnText="this.progressBtnTextc4"></kn-progress>
     <!-- 普通订单进程的步骤 无加速的 -->
     <!-- useStepIcon默认为false，所以订单进程/审核结果进度部分可不传 -->
     <h2 class="tip">订单进程/审核结果进度（无加速的）</h2>
@@ -28,6 +33,9 @@
     <kn-progress :step="0" :useStepIcon="true" :progressBtnText="this.progressBtnText1"></kn-progress>
     <kn-progress :step="1" :useStepIcon="true" :progressBtnText="this.progressBtnText1"></kn-progress>
     <kn-progress :step="2" :useStepIcon="true" :progressBtnText="this.progressBtnText1"></kn-progress>
+
+    <kn-progress :step="0" :useStepIcon="true" :progressBtnText="this.progressBtnTextc5"></kn-progress>
+    <kn-progress :step="1" :useStepIcon="true" :progressBtnText="this.progressBtnTextc6"></kn-progress>
   </div>
 </template>
 <script>
@@ -37,6 +45,30 @@ export default {
   data() {
     return {
       msg: 'kn-progress-demo',
+      progressBtnTextc1: [
+        { text: '审核通过', textColor: '#f9c', bgColor: '#f9c' },
+        { text: '排队中', img: require('../images/current-icon.png') },
+        { text: '放款中' },
+        { text: '银行到账' }
+      ],
+      progressBtnTextc2: [
+        { text: '审核通过', bgColor: '#6fc93e' },
+        { text: '排队中', bgColor: '#6fc93e' },
+        { text: '放款中' },
+        { text: '银行到账' }
+      ],
+      progressBtnTextc3: [
+        { text: '审核通过', bgColor: 'yellow' },
+        { text: '排队中', img: require('../images/current-icon.png'), bgColor: 'yellow' },
+        { text: '放款中', bgColor: 'yellow' },
+        { text: '银行到账' }
+      ],
+      progressBtnTextc4: [
+        { text: '审核通过' },
+        { text: '排队中', img: require('../images/current-icon.png') },
+        { text: '放款中' },
+        { text: '银行到账' }
+      ],
       // 注意：这个是订单进程里面数据结构示范
       progressBtnText: [
         { text: '审核通过' },
@@ -80,6 +112,16 @@ export default {
       progressBtnText1: [
         { text: '基本信息', img: require('../images/step-info-1.png') },
         { text: '联系人', img: require('../images/step-info-2.png') },
+        { text: '运营商认证', img: require('../images/step-info-3.png') }
+      ],
+      progressBtnTextc5: [
+        { text: '基本信息', img: require('../images/step-info-1.png'), bgColor: '#f9c', textColor: '#f9c' },
+        { text: '联系人', img: require('../images/step-info-2.png') },
+        { text: '运营商认证', img: require('../images/step-info-3.png') }
+      ],
+      progressBtnTextc6: [
+        { text: '基本信息', img: require('../images/step-info-1.png'), bgColor: '#6fc93e', textColor: '#6fc93e' },
+        { text: '联系人', img: require('../images/step-info-2.png'), bgColor: '#6fc93e', textColor: '#6fc93e' },
         { text: '运营商认证', img: require('../images/step-info-3.png') }
       ]
     }

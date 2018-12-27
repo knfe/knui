@@ -33,7 +33,7 @@ progressBtnText: [
 
 ```
 
-#### 有加速背景的进度条（可在每个进度位置，自己配置不同的当前背景图标）
+#### 当前步骤有加速背景的进度条（可在每个进度位置，自己配置不同的当前背景图标）
 
 ```html
 <!-- 普通订单进程的步骤 有加速的 -->
@@ -70,6 +70,7 @@ progressBtnTextAccelerate1: [
 #### 进度条每一步都有背景图标，可根据需求换不同图标
 
 ```html
+<!-- 进度条每一步都有背景图标，:useStepIcon="true" -->
 <h2 class="tip">基本信息填写</h2>
 <kn-progress :step="0" :useStepIcon="true" :progressBtnText="this.progressBtnText1"></kn-progress>
 <kn-progress :step="1" :useStepIcon="true" :progressBtnText="this.progressBtnText1"></kn-progress>
@@ -85,9 +86,9 @@ progressBtnText1: [
 | 参数 | 说明 | 类型 | 默认值 | 版本 |
 |------|------|------|------|------|
 | step | 进度条的步骤，标记当前执行到哪个步骤了，从0开始 | Number | 0 | - |
-| accelerate | 当前进度是否替换为加速图标（目前只有订单进程/审核结果页面才有，普通信息填写没有加速功能） | Boolean | false | - |
+| accelerate | 当前进度是否替换为加速图标（目前只有订单进程/审核结果页面才有，普通信息填写没有加速功能,图标可以自己替换） | Boolean | false | - |
 | useStepIcon | 进度条的每个步骤是否都用背景图标 | Boolean | false | - |
-| progressBtnText | 进度条每个步骤底部的文案 | `Array` | - | - |
+| progressBtnText | 进度条每个步骤底部的文案（请特别注意，这个数组里面可配置背景图标，每一步骤文案颜色，每一步骤背景颜色，若不配置则为默认的橙色） | `Array` | - | - |
 
 ### Event
 

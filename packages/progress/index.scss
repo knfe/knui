@@ -14,7 +14,7 @@
         .step {
             position: relative;
             width: 100%;
-            &::after {
+            .line {
                 content: '';
                 width: 100%;
                 height: 2px;
@@ -57,14 +57,14 @@
             }
         }
         .step:last-of-type {
-            &::after {
+            .line {
                 display: none;
             }
         }
         // 已经走过的步骤（包括到的当前步骤）
         .active {
             color: #000;
-            &::after {
+            .line {
                 content: '';
                 display: block;
                 width: 100%;
@@ -99,7 +99,7 @@
     }
     .info-step-div {
         .step {
-            &::after {
+            .line {
                 height: 1px;
                 width: 70%;
                 left: 67%;
@@ -133,7 +133,7 @@
             }
         }
         .active {
-            &::after {
+            .line {
                 height: 1px;
             }
             .text {
