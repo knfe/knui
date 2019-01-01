@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <kn-button></kn-button>
     <router-view></router-view>
   </div>
 </template>
@@ -13,14 +12,10 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import "../packages/style/index.scss";
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  height: 100%;
+  font-size: 14px;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
