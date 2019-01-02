@@ -22,7 +22,6 @@ Vue.use(KnProgress);
 <kn-progress :step="2" :accelerate="false" :progressBtnText="this.progressBtnText"></kn-progress>
 <kn-progress :step="3" :accelerate="false" :progressBtnText="this.progressBtnText"></kn-progress>
 
-<!-- 注意：这个是订单进程里面数据结构示范 -->
 progressBtnText: [
     { text: '步骤1'},
     { text: '步骤2', img: require('../images/current-icon.png')},
@@ -35,7 +34,6 @@ progressBtnText: [
 #### 当前步骤有加速背景的进度条（可在每个进度位置，自己配置不同的当前背景图标）
 
 ```html
-<!-- 普通订单进程的步骤 有加速的 -->
 <kn-progress :step="0" :accelerate="true" :progressBtnText="this.progressBtnTextAccelerate1"></kn-progress>
 <kn-progress :step="1" :accelerate="true" :progressBtnText="this.progressBtnTextAccelerate2"></kn-progress>
 <kn-progress :step="2" :accelerate="true" :progressBtnText="this.progressBtnTextAccelerate3"></kn-progress>

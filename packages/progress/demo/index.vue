@@ -5,8 +5,7 @@
     <kn-progress :step="1" :accelerate="false" :progressBtnText="this.progressBtnTextc2"></kn-progress>
     <kn-progress :step="2" :accelerate="false" :progressBtnText="this.progressBtnTextc3"></kn-progress>
     <kn-progress :step="3" :accelerate="false" :progressBtnText="this.progressBtnTextc4"></kn-progress>
-    <!-- 普通订单进程的步骤 无加速的 -->
-    <!-- useStepIcon默认为false，所以订单进程/审核结果进度部分可不传 -->
+    <!-- useStepIcon默认为false -->
     <h2 class="tip">一般镂空圆（无背景图标，默认颜色）</h2>
     <kn-progress :step="0" :accelerate="false" :progressBtnText="this.progressBtnText"></kn-progress>
     <kn-progress :step="1" :accelerate="false" :progressBtnText="this.progressBtnText"></kn-progress>
@@ -15,8 +14,7 @@
     <!-- 状态为步骤1，并且属于有加速图标背景 -->
     <!-- <h2 class="tip">当前步骤有背景图标（如加速图标，可配置）</h2>
     <kn-progress :step="1" :accelerate="true" :progressBtnText="this.progressBtnText"></kn-progress> -->
-    <!-- 普通订单进程的步骤 有加速的 -->
-    <h2 class="tip">订单进程/审核结果进度（有加速背景的）</h2>
+    <h2 class="tip">当前步骤有背景图标（图标可配置）</h2>
     <kn-progress :step="0" :accelerate="true" :progressBtnText="this.progressBtnTextAccelerate1"></kn-progress>
     <kn-progress :step="1" :accelerate="true" :progressBtnText="this.progressBtnTextAccelerate2"></kn-progress>
     <kn-progress :step="2" :accelerate="true" :progressBtnText="this.progressBtnTextAccelerate3"></kn-progress>
@@ -68,7 +66,6 @@ export default {
         { text: '步骤3' },
         { text: '步骤4' }
       ],
-      // 注意：这个是订单进程里面数据结构示范
       progressBtnText: [
         { text: '步骤1' },
         { text: '步骤2', img: require('../images/current-icon.png') },
@@ -81,7 +78,7 @@ export default {
         { text: '步骤2' },
         { text: '步骤3' }
       ],
-      // 注意：这个是订单进程里面有加速背景的数据结构示范，由于加速背景只限于当前这个步骤，所以配置的位置要注意，需要哪个配哪个，不需要的不做配置
+      // 注意：这个是数据结构示范，背景图标只限于当前这个步骤，配置的位置要注意，需要哪个配哪个，不需要的不做配置
       // 可以自己换需要的背景图标，每一种当前步骤状态都可以用特定的背景图标，以下分别是每个步骤的
       progressBtnTextAccelerate1: [
         { text: '步骤1', img: require('../images/current-icon.png') },
@@ -107,7 +104,7 @@ export default {
         { text: '步骤3' },
         { text: '步骤4', img: require('../images/current-icon.png') }
       ],
-      // 注意：这个是基本信息，里面传字段不能少，此处传的是设计稿默认的，具体需求里面可以按自己需求改图标
+      // 注意：若每个步骤都有背景图标，则里面传字段不能少，具体需求里面可以按自己需求改图标
       progressBtnText1: [
         { text: '步骤1', img: require('../images/step-info-1.png') },
         { text: '步骤2', img: require('../images/step-info-2.png') },
