@@ -5,9 +5,9 @@
 ### 使用指南
 
 ```javascript
-import KnIcon from 'kn-ui'
+import KnCell from 'kn-ui'
 
-Vue.use(KnIcon)
+Vue.use(KnCell)
 ```
 
 ### 代码演示
@@ -15,7 +15,9 @@ Vue.use(KnIcon)
 #### 基础用法
 
 ```html
-<kn-icon />
+<kn-cell icon="city" />
+
+<kn-cell icon="face" :icon-size="small" />
 ```
 
 #### 展示箭头或者展示下拉箭头

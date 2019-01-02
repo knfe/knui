@@ -5,9 +5,9 @@
 ### 使用指南
 
 ```javascript
-import KnPullRefresh from 'kn-ui'
+import KnIcon from 'kn-ui'
 
-Vue.use(KnPullRefresh)
+Vue.use(KnIcon)
 ```
 
 ### 代码演示
@@ -15,9 +15,7 @@ Vue.use(KnPullRefresh)
 #### 基础用法
 
 ```html
-<kn-cell icon="city" />
-
-<kn-cell icon="face" :icon-size="small" />
+<kn-icon />
 ```
 
 ### Cell API
@@ -32,4 +30,3 @@ Vue.use(KnPullRefresh)
 | 事件名 | 说明           | 参数 |
 | ------ | -------------- | ---- |
 | click  | 点击图标时触发 | -    |
-
