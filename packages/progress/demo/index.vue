@@ -1,20 +1,20 @@
 <template>
   <div class="kn-progress-demo">
-    <h2 class="tip">订单进程/审核结果进度（无加速的,可自己更换颜色）</h2>
+    <h2 class="tip">一般镂空圆（无背景图标的,可自己更换颜色）</h2>
     <kn-progress :step="0" :accelerate="false" :progressBtnText="this.progressBtnTextc1"></kn-progress>
     <kn-progress :step="1" :accelerate="false" :progressBtnText="this.progressBtnTextc2"></kn-progress>
     <kn-progress :step="2" :accelerate="false" :progressBtnText="this.progressBtnTextc3"></kn-progress>
     <kn-progress :step="3" :accelerate="false" :progressBtnText="this.progressBtnTextc4"></kn-progress>
     <!-- 普通订单进程的步骤 无加速的 -->
     <!-- useStepIcon默认为false，所以订单进程/审核结果进度部分可不传 -->
-    <h2 class="tip">订单进程/审核结果进度（无加速的）</h2>
+    <h2 class="tip">一般镂空圆（无背景图标，默认颜色）</h2>
     <kn-progress :step="0" :accelerate="false" :progressBtnText="this.progressBtnText"></kn-progress>
     <kn-progress :step="1" :accelerate="false" :progressBtnText="this.progressBtnText"></kn-progress>
     <kn-progress :step="2" :accelerate="false" :progressBtnText="this.progressBtnText"></kn-progress>
     <kn-progress :step="3" :accelerate="false" :progressBtnText="this.progressBtnText"></kn-progress>
-    <!-- 状态为排队中，并且属于加速处理的订单（需求里面加速资格的是出钱买的） -->
-    <h2 class="tip">排队中（已加速）</h2>
-    <kn-progress :step="1" :accelerate="true" :progressBtnText="this.progressBtnText"></kn-progress>
+    <!-- 状态为步骤1，并且属于有加速图标背景 -->
+    <!-- <h2 class="tip">当前步骤有背景图标（如加速图标，可配置）</h2>
+    <kn-progress :step="1" :accelerate="true" :progressBtnText="this.progressBtnText"></kn-progress> -->
     <!-- 普通订单进程的步骤 有加速的 -->
     <h2 class="tip">订单进程/审核结果进度（有加速背景的）</h2>
     <kn-progress :step="0" :accelerate="true" :progressBtnText="this.progressBtnTextAccelerate1"></kn-progress>
@@ -26,10 +26,9 @@
     <kn-progress :step="0" :accelerate="false" :progressBtnText="this.progressBtnText10"></kn-progress>
     <kn-progress :step="1" :accelerate="false" :progressBtnText="this.progressBtnText10"></kn-progress>
     <kn-progress :step="2" :accelerate="false" :progressBtnText="this.progressBtnText10"></kn-progress>
-    <!-- 基本信息填写的步骤 -->
-    <!-- 注意，基本信息填写部分都是有背景的小图标，所以useStepIcon为true，但是此场景没有加速资格，所以accelerate为false -->
-    <!-- accelerate默认为false，所以基本信息填写部分可不传 -->
-    <h2 class="tip">基本信息填写</h2>
+    <!-- accelerate 表示当前步骤是否有背景图标，默认为false -->
+    <!-- useStepIcon 表示每个步骤都有背景图标，可配置，默认为false -->
+    <h2 class="tip">每个步骤都有背景图标（图标颜色可配置）</h2>
     <kn-progress :step="0" :useStepIcon="true" :progressBtnText="this.progressBtnText1"></kn-progress>
     <kn-progress :step="1" :useStepIcon="true" :progressBtnText="this.progressBtnText1"></kn-progress>
     <kn-progress :step="2" :useStepIcon="true" :progressBtnText="this.progressBtnText1"></kn-progress>
@@ -46,83 +45,83 @@ export default {
     return {
       msg: 'kn-progress-demo',
       progressBtnTextc1: [
-        { text: '审核通过', textColor: '#f9c', bgColor: '#f9c' },
-        { text: '排队中', img: require('../images/current-icon.png') },
-        { text: '放款中' },
-        { text: '银行到账' }
+        { text: '步骤1', textColor: '#f9c', bgColor: '#f9c' },
+        { text: '步骤2', img: require('../images/current-icon.png') },
+        { text: '步骤3' },
+        { text: '步骤4' }
       ],
       progressBtnTextc2: [
-        { text: '审核通过', bgColor: '#6fc93e' },
-        { text: '排队中', bgColor: '#6fc93e' },
-        { text: '放款中' },
-        { text: '银行到账' }
+        { text: '步骤1', bgColor: '#6fc93e' },
+        { text: '步骤2', bgColor: '#6fc93e' },
+        { text: '步骤3' },
+        { text: '步骤4' }
       ],
       progressBtnTextc3: [
-        { text: '审核通过', bgColor: 'yellow' },
-        { text: '排队中', img: require('../images/current-icon.png'), bgColor: 'yellow' },
-        { text: '放款中', bgColor: 'yellow' },
-        { text: '银行到账' }
+        { text: '步骤1', bgColor: 'yellow' },
+        { text: '步骤2', img: require('../images/current-icon.png'), bgColor: 'yellow' },
+        { text: '步骤3', bgColor: 'yellow' },
+        { text: '步骤4' }
       ],
       progressBtnTextc4: [
-        { text: '审核通过' },
-        { text: '排队中', img: require('../images/current-icon.png') },
-        { text: '放款中' },
-        { text: '银行到账' }
+        { text: '步骤1' },
+        { text: '步骤2', img: require('../images/current-icon.png') },
+        { text: '步骤3' },
+        { text: '步骤4' }
       ],
       // 注意：这个是订单进程里面数据结构示范
       progressBtnText: [
-        { text: '审核通过' },
-        { text: '排队中', img: require('../images/current-icon.png') },
-        { text: '放款中' },
-        { text: '银行到账' }
+        { text: '步骤1' },
+        { text: '步骤2', img: require('../images/current-icon.png') },
+        { text: '步骤3' },
+        { text: '步骤4' }
       ],
       // 进度条只有三个步骤的情况，数组就传长度3
       progressBtnText10: [
-        { text: '审核通过' },
-        { text: '放款中' },
-        { text: '银行到账' }
+        { text: '步骤1' },
+        { text: '步骤2' },
+        { text: '步骤3' }
       ],
       // 注意：这个是订单进程里面有加速背景的数据结构示范，由于加速背景只限于当前这个步骤，所以配置的位置要注意，需要哪个配哪个，不需要的不做配置
       // 可以自己换需要的背景图标，每一种当前步骤状态都可以用特定的背景图标，以下分别是每个步骤的
       progressBtnTextAccelerate1: [
-        { text: '审核通过', img: require('../images/current-icon.png') },
-        { text: '排队中' },
-        { text: '放款中' },
-        { text: '银行到账' }
+        { text: '步骤1', img: require('../images/current-icon.png') },
+        { text: '步骤2' },
+        { text: '步骤3' },
+        { text: '步骤4' }
       ],
       progressBtnTextAccelerate2: [
-        { text: '审核通过' },
-        { text: '排队中', img: require('../images/current-icon.png') },
-        { text: '放款中' },
-        { text: '银行到账' }
+        { text: '步骤1' },
+        { text: '步骤2', img: require('../images/current-icon.png') },
+        { text: '步骤3' },
+        { text: '步骤4' }
       ],
       progressBtnTextAccelerate3: [
-        { text: '审核通过' },
-        { text: '排队中' },
-        { text: '放款中', img: require('../images/current-icon.png') },
-        { text: '银行到账' }
+        { text: '步骤1' },
+        { text: '步骤2' },
+        { text: '步骤3', img: require('../images/current-icon.png') },
+        { text: '步骤4' }
       ],
       progressBtnTextAccelerate4: [
-        { text: '审核通过' },
-        { text: '排队中' },
-        { text: '放款中' },
-        { text: '银行到账', img: require('../images/current-icon.png') }
+        { text: '步骤1' },
+        { text: '步骤2' },
+        { text: '步骤3' },
+        { text: '步骤4', img: require('../images/current-icon.png') }
       ],
       // 注意：这个是基本信息，里面传字段不能少，此处传的是设计稿默认的，具体需求里面可以按自己需求改图标
       progressBtnText1: [
-        { text: '基本信息', img: require('../images/step-info-1.png') },
-        { text: '联系人', img: require('../images/step-info-2.png') },
-        { text: '运营商认证', img: require('../images/step-info-3.png') }
+        { text: '步骤1', img: require('../images/step-info-1.png') },
+        { text: '步骤2', img: require('../images/step-info-2.png') },
+        { text: '步骤3', img: require('../images/step-info-3.png') }
       ],
       progressBtnTextc5: [
-        { text: '基本信息', img: require('../images/step-info-1.png'), bgColor: '#f9c', textColor: '#f9c' },
-        { text: '联系人', img: require('../images/step-info-2.png') },
-        { text: '运营商认证', img: require('../images/step-info-3.png') }
+        { text: '步骤1', img: require('../images/step-info-1.png'), bgColor: '#f9c', textColor: '#f9c' },
+        { text: '步骤2', img: require('../images/step-info-2.png') },
+        { text: '步骤3', img: require('../images/step-info-3.png') }
       ],
       progressBtnTextc6: [
-        { text: '基本信息', img: require('../images/step-info-1.png'), bgColor: '#6fc93e', textColor: '#6fc93e' },
-        { text: '联系人', img: require('../images/step-info-2.png'), bgColor: '#6fc93e', textColor: '#6fc93e' },
-        { text: '运营商认证', img: require('../images/step-info-3.png') }
+        { text: '步骤1', img: require('../images/step-info-1.png'), bgColor: '#6fc93e', textColor: '#6fc93e' },
+        { text: '步骤2', img: require('../images/step-info-2.png'), bgColor: '#6fc93e', textColor: '#6fc93e' },
+        { text: '步骤3', img: require('../images/step-info-3.png') }
       ]
     }
   },
