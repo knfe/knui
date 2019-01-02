@@ -1,0 +1,151 @@
+/**
+ * kn-progress component style
+ */
+// 引入全局公共变量
+@import "../style/index.scss";
+
+.kn-progress {
+    .progress-div,
+    .info-step-div {
+        padding: px2rem(20) px2rem(20);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        .step {
+            position: relative;
+            width: 100%;
+            .line {
+                content: '';
+                width: 100%;
+                height: 2px;
+                background: #ddd;
+                position: absolute;
+                top: px2rem(5);
+                left: 50%;
+            }
+            .circle {
+                position: absolute;
+                left: 50%;
+                margin-left: px2rem(-6);
+                width: px2rem(12);
+                height: px2rem(12);
+                border-radius: 50%;
+                background: #ddd;
+                z-index: 1000;
+                .circle-img {
+                    transform: scale(0.5);
+                }
+            }
+            .acceleratecircle {
+                width: px2rem(24);
+                height: px2rem(24);
+                top: px2rem(-6);
+                margin-left: px2rem(-10);
+                .circle-img {
+                    transform: scale(1);
+                }
+            }
+
+            .text {
+                margin-top: px2rem(20);
+                font-size: px2rem(14);
+                color: #ddd;
+                text-align: center;
+            }
+            .accelerateCurrentText {
+                color: #000;
+            }
+        }
+        .step:last-of-type {
+            .line {
+                display: none;
+            }
+        }
+        // 已经走过的步骤（包括到的当前步骤）
+        .active {
+            color: #000;
+            .line {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 2px;
+                background: $kn-cl-primary;
+                position: absolute;
+                top: px2rem(5);
+                left: 50%;
+            }
+            .circle {
+                background: $kn-cl-primary;
+            }
+        }
+        // 当前步骤的样式
+        .current {
+            .circle {
+                position: absolute;
+                left: 50%;
+                top: -16%;
+                margin-left: px2rem(-9);
+                width: px2rem(24);
+                height: px2rem(24);
+                background: #fff;
+                border: px2rem(9) solid $kn-cl-primary;
+                border-radius: 50%;
+                z-index: 1000;
+            }
+            .text {
+                color: #000;
+            }
+        }
+    }
+    .info-step-div {
+        .step {
+            .line {
+                height: 1px;
+                width: 70%;
+                left: 67%;
+            }
+            .circle {
+                width: px2rem(20);
+                height: px2rem(20);
+                top: px2rem(-4);
+            }
+
+        }
+        // 第一张由于图片的原因往下微调
+        .step:first-of-type {
+            .circle-img {
+                margin-top: px2rem(2);
+            }
+        }
+        .current {
+            .circle {
+                position: absolute;
+                left: 50%;
+                top: -13%;
+                margin-left: px2rem(-9);
+                background: $kn-cl-primary;
+                border: none;
+                border-radius: 50%;
+                z-index: 1000;
+            }
+            .text {
+                color: $kn-cl-primary;
+            }
+        }
+        .active {
+            .line {
+                height: 1px;
+            }
+            .text {
+                color: $kn-cl-primary;
+            }
+        }
+    }
+    .accelerate {
+        .circle {
+            width: px2rem(24);
+            height: px2rem(24);
+            top: px2rem(-4);
+        }
+    }
+}
