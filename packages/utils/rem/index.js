@@ -7,9 +7,9 @@ export default function(baseWidth, baseRate) {
   }
   function setHtmlFontSize() {
     var screenWidth = window.innerWidth
-    console.log(screenWidth, baseWidth, baseRate)
+    // console.log(screenWidth, baseWidth, baseRate)
     var fontSize = (screenWidth / baseWidth) * baseRate
-    console.log(fontSize)
+    // console.log(fontSize)
     document.documentElement.style.fontSize = fontSize + 'px'
   }
   setHtmlFontSize()
