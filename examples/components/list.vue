@@ -6,6 +6,8 @@
       <p><router-link :to="{ name: 'cell'}">cell组件</router-link></p>
       <p><router-link :to="{ name: 'icon'}">icon组件</router-link></p>
       <p><router-link :to="{ name: 'pullRefresh'}">pullRefresh组件</router-link></p>
+      <p><router-link :to="{ name: 'progress'}">progress组件</router-link></p>
+
   </div>
 </template>
 

@@ -84,4 +84,21 @@ const pullRefresh = {
   }
 }
 
-export default [button, cell, icon, pullRefresh, home]
+const progress = {
+  path: '/demo/progress',
+  name: 'progress',
+  meta: {
+    title: 'progress组件'
+  },
+  component: resolve => {
+    require.ensure(
+      [],
+      () => {
+        resolve(require('@/progress/demo/index.vue'))
+      },
+      'progress'
+    )
+  }
+}
+
+export default [ button, cell, icon, pullRefresh, progress, home ]
