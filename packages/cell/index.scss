@@ -38,6 +38,7 @@
       position: relative;
       top: 50%;
       transform: translateY(-50%);
+      text-align: left;
 
       .txt-main {
         height: px2rem(21);
@@ -79,6 +80,27 @@
   .cell-value {
     height: px2rem(44/2);
     line-height: px2rem(44/2);
+
+    // value 关联文字
+    .value-label {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: right;
+
+      .txt-main {
+        height: px2rem(21);
+        line-height: px2rem(21);
+        font-size: px2rem(15);
+      }
+
+      .txt-label {
+        height: px2rem(13);
+        line-height: px2rem(13);
+        font-size: px2rem(12);
+        margin-top: px2rem(2);
+      }
+    }
 
     .value-txt {
       height: px2rem(44/2);
