@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`change head content when pulling down 1`] = `
+<div class="kn-pullrefresh">
+  <div class="track" style="transform: translate3d(0,20px, 0);">
+    <div class="head" style="height: 50px; line-height: 50px; top: -50px;">
+      <!---->
+      <div class="hint" style="height: 50px; line-height: 50px;">下拉即可刷新</div>
+      <!---->
+      <!---->
+    </div>
+  </div>
+</div>
+`;
+
+exports[`change head content when pulling down 2`] = `
+<div class="kn-pullrefresh">
+  <div class="track" style="transform: translate3d(0,63.245553203367585px, 0);">
+    <div class="head" style="height: 50px; line-height: 50px; top: -50px;">
+      <!---->
+      <!---->
+      <div class="hint" style="height: 50px; line-height: 50px;">释放即可刷新</div>
+      <!---->
+    </div>
+  </div>
+</div>
+`;
+
+exports[`change head content when pulling down 3`] = `
+<div class="kn-pullrefresh">
+  <div class="track" style="transform: translate3d(0,50px, 0);">
+    <div class="head" style="height: 50px; line-height: 50px; top: -50px;">
+      <!---->
+      <!---->
+      <!---->
+      <div class="hint" style="height: 50px; line-height: 50px;">正在加载...</div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`change head content when pulling down 4`] = `
+<div class="kn-pullrefresh">
+  <div class="track" style="transform: translate3d(0,50px, 0);">
+    <div class="head" style="height: 50px; line-height: 50px; top: -50px;">
+      <!---->
+      <!---->
+      <!---->
+      <div class="hint" style="height: 50px; line-height: 50px;">正在加载...</div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`change head content when pulling down 5`] = `
+<div class="kn-pullrefresh">
+  <div class="track" style="transform: translate3d(0,0px, 0);">
+    <div class="head" style="height: 50px; line-height: 50px; top: -50px;">
+      <!---->
+      <!---->
+      <!---->
+    </div>
+  </div>
+</div>
+`;
+
+exports[`not in page top 1`] = `
+<div class="kn-pullrefresh">
+  <div class="track" style="transform: translate3d(0,50px, 0);">
+    <div class="head" style="height: 50px; line-height: 50px; top: -50px;">
+      <!---->
+      <!---->
+      <!---->
+      <div class="hint" style="height: 50px; line-height: 50px;">正在加载...</div>
+    </div>
+  </div>
+</div>
+`;

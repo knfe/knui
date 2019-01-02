@@ -96,5 +96,14 @@ module.exports = [
       # ${data.namespace}
     `,
     output: 'en-US.md'
+  },
+  // test
+  {
+    tpl: data => `
+    // Wirte test case in this file
+    // import { shallowMount } from '@vue/test-utils'
+    // import ${data.demo.namespace} from '..'
+    `,
+    output: 'test/index.spec.js'
   }
 ]

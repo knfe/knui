@@ -1,6 +1,6 @@
 <template>
   <transition name="kn-layer-bounce">
-    <div class="kn-layer" v-if="isShow">
+    <div class="kn-layer" v-if="value">
       <div class="kn-layer--mask"></div>
       <div class="kn-layer--box g-tac" :class="[`kn-layer--${type}`]">
         <div class="kn-layer--title" v-if="title" v-text="title"></div>
@@ -21,10 +21,10 @@
             :plain="true"
             :size="'small'"
             :round="false"
-            @click="close"
+            @click="handle('cancel')"
             v-if="type !== 'tip'"
-          >cancel</kn-button>
-          <kn-button :size="'small'" :round="false" @click="comfirm">confirm</kn-button>
+          >{{cancelText}}</kn-button>
+          <kn-button :size="'small'" :round="false" @click="handle('comfirm')">{{comfirmText}}</kn-button>
         </div>
       </div>
     </div>
@@ -41,7 +41,7 @@ export default {
     return {}
   },
   props: {
-    isShow: {
+    value: {
       type: Boolean,
       default: false
     },
@@ -63,23 +63,32 @@ export default {
     placeholderText: {
       type: String,
       default: ''
+    },
+    cancelText: {
+      type: String,
+      default: 'cancel'
+    },
+    comfirmText: {
+      type: String,
+      default: 'confirm'
     }
   },
   methods: {
-    comfirm(evt) {
-      this.$emit('comfirm', evt)
-    },
-    close(evt) {
-      this.$emit('input', false)
+    // 事件处理
+    handle(evt, action) {
+      if (action === 'comfirm') {
+        this.$emit('comfirm', evt)
+      } else {
+        this.$emit('input', false)
+      }
     }
   },
-  mounted() {
-    console.log('1111')
-  },
+  mounted() {},
   watch: {
-    isShow(nv) {
+    value(nv) {
       if (nv) {
         this.$nextTick(() => {
+          // 自动聚焦
           this.$refs.input.focus()
         })
       }

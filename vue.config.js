@@ -85,19 +85,6 @@ module.exports = {
       .end()
       .use('babel')
       .loader('babel-loader')
-
-    // if (isCoverage) {
-    config.module
-      .rule('js|ts')
-      .test(/\.(js)/)
-      .include.add(resolve('examples'))
-      .add(resolve('tests'))
-      .add(resolve('packages'))
-      .end()
-      .use('istanbul-instrumenter-loader')
-      .loader('istanbul-instrumenter-loader')
-      .end()
-    // }
   },
   // 是否生成 .js.map 文件
   productionSourceMap: false,
