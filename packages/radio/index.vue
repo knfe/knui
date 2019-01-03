@@ -13,10 +13,11 @@ export default {
     }
   },
   props: {
-    // 表示是否有勾，默认为有勾
+    // 表示是否有勾，默认为有勾（没有勾的是空心圆，仅样式有区别）
     nocheck: {
       default: false
     },
+    // 表示是否为选中状态（选中为有颜色的背景，没选中为灰色背景）
     checked: {
       default: true
     },
