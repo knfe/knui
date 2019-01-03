@@ -35,7 +35,6 @@ export default {
   },
   methods: {
     onSwitch1(msg) {
-      // console.log(msg)
       this.checked1 = !this.checked1
     },
     onSwitch2() {
