@@ -18,6 +18,7 @@
     <app :title="'学信网认证'" :value="'已认证'" isLink></app>
     <app :title="'用途'" :value="'学习'" isSelect hasInfo></app>
     <app :title="'姓名'" :value="'已认证'" :title-label="'请填写你的姓名哦'"></app>
+    <app :title="'优惠券'" :value="'提额券'" :value-label="'选择您的优惠券eagageagage'"></app>
     <app :title="'学信网'" :value="'已认证'" is-select :title-label="'未认证可能导致失败'"></app>
     <app :title="'姓名'">
       <input slot="value-txt" type="text" placeholder="请输入您的姓名">
