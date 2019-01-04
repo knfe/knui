@@ -67,23 +67,6 @@ const icon = {
   }
 }
 
-const pullRefresh = {
-  path: '/demo/pullRefresh',
-  name: 'pullRefresh',
-  meta: {
-    title: 'pullRefresh组件'
-  },
-  component: resolve => {
-    require.ensure(
-      [],
-      () => {
-        resolve(require('@/pullRefresh/demo/index.vue'))
-      },
-      'pullRefresh'
-    )
-  }
-}
-
 const progress = {
   path: '/demo/progress',
   name: 'progress',
@@ -101,4 +84,38 @@ const progress = {
   }
 }
 
-export default [ button, cell, icon, pullRefresh, progress, home ]
+const pullRefresh = {
+  path: '/demo/pullRefresh',
+  name: 'pullRefresh',
+  meta: {
+    title: 'pullRefresh组件'
+  },
+  component: resolve => {
+    require.ensure(
+      [],
+      () => {
+        resolve(require('@/pullRefresh/demo/index.vue'))
+      },
+      'pullRefresh'
+    )
+  }
+}
+
+const radio = {
+  path: '/demo/radio',
+  name: 'radio',
+  meta: {
+    title: 'radio组件'
+  },
+  component: resolve => {
+    require.ensure(
+      [],
+      () => {
+        resolve(require('@/radio/demo/index.vue'))
+      },
+      'radio'
+    )
+  }
+}
+
+export default [ button, cell, icon, progress, pullRefresh, radio, home ]

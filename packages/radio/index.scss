@@ -1,0 +1,32 @@
+/**
+ * kn-radio component style
+ */
+// 引入全局公共变量
+@import "../style/index.scss";
+.kn-radio {
+    margin: px2rem(10);
+    .radio-circle {
+        width: px2rem(14);
+        height: px2rem(14);
+        border-radius: 50%;
+    }
+    // 选中状态
+    .checked {
+        background: url(./images/able-check.png) no-repeat;
+        background-size: 70%;
+        background-position: 50% 50%;
+        background-color: $kn-cl-primary;
+    }
+    // 未选状态
+    .unchecked {
+        background: url(./images/unable-check.png) no-repeat;
+        background-size: 70%;
+        background-position: 50% 50%;
+        background-color: #fff;
+        border: px2rem(1) solid #999;
+    }
+    .no-check {
+        background-image: none;
+        background-color: #fff !important;
+    }
+}
