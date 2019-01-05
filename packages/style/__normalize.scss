@@ -147,3 +147,25 @@ i {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
+
+// 下边框 100%
+.bd-btm-100::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  content: '';
+  border-top: 1px solid #D8D8D8;
+  transform: scaleY(0.5) translateX(-50%);
+}
+
+// 下边框，靠右96宽
+.bd-btm-95::after {
+  position: absolute;
+  bottom: 0;
+  left: 53%;
+  width: 95%;
+  content: '';
+  border-top: 1px solid #D8D8D8;
+  transform: scaleY(0.5) translateX(-50%);
+}

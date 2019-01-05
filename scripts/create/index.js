@@ -7,10 +7,16 @@ const argv = require('minimist')(process.argv.slice(2))
 
 // package path
 const packagePath = path.resolve(process.cwd(), './packages')
-const testUnitPath = path.resolve(process.cwd(), './tests/unit')
 
 // package name
 const packageName = typeof argv.name === 'boolean' ? '' : (argv.name || '').trim().toLowerCase()
+
+// 引入list.vue和路由文件
+const pathList = path.resolve(process.cwd(), './examples/components')
+const routerList = path.resolve(process.cwd(), './examples/router')
+let listItems = ''
+let routesItems = ''
+let exportsList = []
 
 // check package name
 if (!packageName) {
@@ -19,7 +25,7 @@ if (!packageName) {
 const glob = require('glob')
 const fs = require('fs')
 let packageNames = []
-const packageNamesFilter = ['style']
+const packageNamesFilter = ['style', 'assets']
 glob.sync(path.resolve(packagePath, './*')).forEach(el => {
   if (fs.statSync(el).isDirectory()) {
     let tmp = el.split('/')
@@ -38,6 +44,7 @@ packageNames.push(packageName)
 const template = require('./template')
 fs.mkdirSync(path.resolve(packagePath, './' + packageName))
 fs.mkdirSync(path.resolve(packagePath, './' + packageName + '/demo'))
+fs.mkdirSync(path.resolve(packagePath, './' + packageName + '/test'))
 const data = {
   namespace: 'kn-' + packageName,
   demo: {
@@ -69,8 +76,29 @@ packageNames = packageNames.filter(function(elm) {
 packageNames.forEach(el => {
   let key = 'Kn' + el.substring(0, 1).toUpperCase() + el.substring(1, el.length)
   indexStr += `import ${key} from './${el}/index.vue'\n`
+  exportsList.push(el)
+  listItems += `<p><router-link :to="{ name: '${el}'}">${el}组件</router-link></p>\n      `
+  routesItems += `
+const ${el} = {
+  path: '/demo/${el}',
+  name: '${el}',
+  meta: {
+    title: '${el}组件'
+  },
+  component: resolve => {
+    require.ensure(
+      [],
+      () => {
+        resolve(require('@/${el}/demo/index.vue'))
+      },
+      '${el}'
+    )
+  }
+}
+`
   keys.push(key)
 })
+console.log('items', listItems, routesItems)
 let listStr = ''
 for (let i = 0; i < keys.length - 1; i++) {
   listStr += keys[i] + ', '
@@ -102,24 +130,51 @@ export default {
 `
 fs.writeFileSync(path.resolve(packagePath, './index.js'), indexStr)
 
-let testsUnitStr = `
-import { expect } from 'chai'
-import { shallowMount } from '@vue/test-utils'
-import ${packageName} from '../../packages/${packageName}'
+let listComponens = `
+<template>
+  <div class="list-wrapper">
+      <h3>组件list - 开发模式</h3>
+      ${listItems}
+  </div>
+</template>
 
-describe('${packageName}.vue', () => {
-  it('renders props.msg when passed', () => {
-    // 以下的测试内容需要修改，否则会测试失败，之所以写上这些测试内容是为了避免eslint报错
-    const type = 'danger'
-    const wrapper = shallowMount(${packageName}, {
-      propsData: { type }
-    })
-    expect(wrapper.props('type')).to.equal('danger')
-  })
-})
+<script>
+/* eslint-disable */
+// import Vue from 'vue'
+export default {
+  name: 'list',
+  data() {
+    return {};
+  },
+  methods: {}
+};
+</script>
+`
+exportsList.push('home')
+let listRouter = `
+const home = {
+  path: '/',
+  name: 'home',
+  meta: {
+    title: 'home'
+  },
+  component: resolve => {
+    require.ensure(
+      [],
+      () => {
+        resolve(require('../components/list.vue'))
+      },
+      'home'
+    )
+  }
+}
+${routesItems}
+export default [ ${exportsList.join(', ')} ]
 `
 
-fs.writeFileSync(path.resolve(testUnitPath, `./${packageName}.spec.js`), testsUnitStr)
+fs.writeFileSync(path.resolve(pathList, './list.vue'), listComponens)
+fs.writeFileSync(path.resolve(routerList, './list.js'), listRouter)
+// 生成路由和list项
 
 // complete
 console.log('The ' + packageName + ' component package already created!')
