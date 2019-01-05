@@ -67,6 +67,23 @@ const icon = {
   }
 }
 
+const progress = {
+  path: '/demo/progress',
+  name: 'progress',
+  meta: {
+    title: 'progress组件'
+  },
+  component: resolve => {
+    require.ensure(
+      [],
+      () => {
+        resolve(require('@/progress/demo/index.vue'))
+      },
+      'progress'
+    )
+  }
+}
+
 const pullRefresh = {
   path: '/demo/pullRefresh',
   name: 'pullRefresh',
@@ -84,4 +101,21 @@ const pullRefresh = {
   }
 }
 
-export default [button, cell, icon, pullRefresh, home]
+const radio = {
+  path: '/demo/radio',
+  name: 'radio',
+  meta: {
+    title: 'radio组件'
+  },
+  component: resolve => {
+    require.ensure(
+      [],
+      () => {
+        resolve(require('@/radio/demo/index.vue'))
+      },
+      'radio'
+    )
+  }
+}
+
+export default [ button, cell, icon, progress, pullRefresh, radio, home ]

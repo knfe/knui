@@ -11,7 +11,7 @@
   * button - kerentang
   * card - kerentang
   * pullRefresh - keno lee
-  * checkout - chenhx9211
+  * checkbox - chenhx9211
   * radio - chenhx9211
   * input - wujinrong
   * loading - wujinrong
