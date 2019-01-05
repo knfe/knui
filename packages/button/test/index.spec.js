@@ -1,6 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
 import button from '../'
-
 describe('button.vue', () => {
   test('renders props.type when passed', () => {
     const type = 'danger'
