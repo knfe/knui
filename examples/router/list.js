@@ -118,4 +118,21 @@ const radio = {
   }
 }
 
-export default [ button, cell, icon, progress, pullRefresh, radio, home ]
+const loading = {
+  path: '/demo/loading',
+  name: 'loading',
+  meta: {
+    title: 'loading组件'
+  },
+  component: resolve => {
+    require.ensure(
+      [],
+      () => {
+        resolve(require('@/loading/demo/index.vue'))
+      },
+      'loading'
+    )
+  }
+}
+
+export default [ button, cell, icon, progress, pullRefresh, radio, loading, home ]

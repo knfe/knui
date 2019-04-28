@@ -8,7 +8,7 @@
       <p><router-link :to="{ name: 'progress'}">progress组件</router-link></p>
       <p><router-link :to="{ name: 'pullRefresh'}">pullRefresh组件</router-link></p>
       <p><router-link :to="{ name: 'radio'}">radio组件</router-link></p>
-
+      <p><router-link :to="{ name: 'loading'}">loading组件</router-link></p>
   </div>
 </template>
 
