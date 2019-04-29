@@ -17,7 +17,7 @@ npm i kn-ui
 // main.js
 // 导入kn-button组件
 import Vue from 'vue';
-import  from 'kn-ui';
+import KnUi from 'kn-ui';
 // 引入css
 import 'kn-ui/dist/lib.css'
 Vue.use(KnUi);

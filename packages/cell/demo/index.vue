@@ -15,11 +15,11 @@
     >
       <icon slot="title-icon" :icon="'city'" class="g-mr8 fl"></icon>
     </app>
-    <app :title="'学信网认证'" :value="'已认证'" isLink></app>
-    <app :title="'用途'" :value="'学习'" isSelect hasInfo></app>
+    <app :title="'会员认证'" :value="'已认证'" isLink></app>
+    <app :title="'性别'" :value="'男'" isSelect hasInfo></app>
     <app :title="'姓名'" :value="'已认证'" :title-label="'请填写你的姓名哦'"></app>
-    <app :title="'优惠券'" :value="'提额券'" :value-label="'选择您的优惠券eagageagage'"></app>
-    <app :title="'学信网'" :value="'已认证'" is-select :title-label="'未认证可能导致失败'"></app>
+    <app :title="'优惠券'" :value="'立减100元'" :value-label="'选择您的优惠券'"></app>
+    <app :title="'会员认证'" :value="'已认证'" is-select :title-label="'认证可以获得更多权限哦'"></app>
     <app :title="'姓名'">
       <input slot="value-txt" type="text" placeholder="请输入您的姓名">
     </app>
