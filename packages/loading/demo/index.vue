@@ -17,7 +17,7 @@
 </template>
 <script>
 // import app from '../index.vue'
-import knLoading from '../index.js'
+import '../index.scss'
 
 export default {
   name: 'kn-loading-demo',
@@ -27,19 +27,15 @@ export default {
     }
   },
   created() {
-    // Loading({
-    //   type: 'spinner',
-    //   shadow: 'rgba(0, 0, 0, .3)',
-    //   content: '',
-    //   hint: '请求中...'
-    // }) // 调用
-    let index = knLoading.open({ type: 'circular', shadowClose: true })
-    console.log(index)
-    setTimeout(() => {
-      knLoading.close(index)
-    }, 2000)
-    // knLoading.open({ type: 'circular' })
-    knLoading.open({ type: 'spinner' })
+    console.log(this.$knLoading)
+
+    // let index = this.$knLoading.open({ type: 'circular', shadowClose: true })
+    // console.log(index)
+    // setTimeout(() => {
+    //   this.$knLoading.close(index)
+    // }, 2000)
+    // // knLoading.open({ type: 'circular' })
+    // this.$knLoading.open({ type: 'spinner' })
   },
   components: {
     // app
