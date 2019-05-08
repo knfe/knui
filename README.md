@@ -61,4 +61,4 @@ Vue.component(KnButton.name, KnButton)
 
 [KnPullRefresh](./packages/pullRefresh/zh-cN.md)
 
-[KnRadio](.//packages/radio/zh-cN.md)
+[KnRadio](./packages/radio/zh-cN.md)
