@@ -16,8 +16,7 @@
   </div>
 </template>
 <script>
-// import app from '../index.vue'
-import '../index.scss'
+import knLoading from '../index.js'
 
 export default {
   name: 'kn-loading-demo',
@@ -35,7 +34,11 @@ export default {
     //   this.$knLoading.close(index)
     // }, 2000)
     // // knLoading.open({ type: 'circular' })
-    // this.$knLoading.open({ type: 'spinner' })
+    let index = knLoading.open({ type: 'spinner', time: 6 })
+    setTimeout(() => {
+      console.log(1)
+      knLoading.close(index)
+    }, 2000)
   },
   components: {
     // app

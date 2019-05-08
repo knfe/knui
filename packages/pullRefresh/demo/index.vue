@@ -28,6 +28,8 @@ export default {
 }
 </script>
 <style lang="scss">
+@import '../../style/index.scss';
+
 .kn-pullrefresh-demo {
   .content {
     width: 100%;
