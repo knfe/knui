@@ -47,18 +47,18 @@ Vue.component(KnButton.name, KnButton)
 
 ## 组件
 
-[knLoading](/packages/loading/zh-cN.md)
+[knLoading](./packages/loading/zh-cN.md)
 
-[knPullRefresh](/packages/pullRefresh/zh-cN.md)
+[knPullRefresh](./packages/pullRefresh/zh-cN.md)
 
-[KnButton](/packages/button/zh-cN.md)
+[KnButton](./packages/button/zh-cN.md)
 
-[KnCell](/packages/cell/zh-cN.md)
+[KnCell](./packages/cell/zh-cN.md)
 
-[KnIcon](/packages/icon/zh-cN.md)
+[KnIcon](./packages/icon/zh-cN.md)
 
-[KnProgress](/packages/progress/zh-cN.md)
+[KnProgress](./packages/progress/zh-cN.md)
 
-[KnPullRefresh](/packages/pullRefresh/zh-cN.md)
+[KnPullRefresh](./packages/pullRefresh/zh-cN.md)
 
-[KnRadio](/packages/radio/zh-cN.md)
+[KnRadio](./packages/radio/zh-cN.md)
