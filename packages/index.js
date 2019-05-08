@@ -12,11 +12,11 @@ import KnRadio from './radio/index.vue'
 import KnLoading from './loading/index.js'
 
 // package version
-const version = '0.4.0'
+const version = '0.4.1'
 
 // init components
 const components = [KnButton, KnCell, KnIcon, KnProgress, KnPullRefresh, KnRadio]
-const install = function (Vue) {
+const install = function(Vue) {
   if (install.installed) return
   components.map(component => Vue.component(component.name, component))
   Vue.prototype.$knLoading = KnLoading
