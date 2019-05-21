@@ -67,6 +67,23 @@ const icon = {
   }
 }
 
+const loading = {
+  path: '/demo/loading',
+  name: 'loading',
+  meta: {
+    title: 'loading组件'
+  },
+  component: resolve => {
+    require.ensure(
+      [],
+      () => {
+        resolve(require('@/loading/demo/index.vue'))
+      },
+      'loading'
+    )
+  }
+}
+
 const progress = {
   path: '/demo/progress',
   name: 'progress',
@@ -118,21 +135,21 @@ const radio = {
   }
 }
 
-const loading = {
-  path: '/demo/loading',
-  name: 'loading',
+const message = {
+  path: '/demo/message',
+  name: 'message',
   meta: {
-    title: 'loading组件'
+    title: 'message组件'
   },
   component: resolve => {
     require.ensure(
       [],
       () => {
-        resolve(require('@/loading/demo/index.vue'))
+        resolve(require('@/message/demo/index.vue'))
       },
-      'loading'
+      'message'
     )
   }
 }
 
-export default [ button, cell, icon, progress, pullRefresh, radio, loading, home ]
+export default [ button, cell, icon, loading, progress, pullRefresh, radio, message, home ]

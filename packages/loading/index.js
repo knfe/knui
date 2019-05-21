@@ -2,6 +2,7 @@ import Vue from 'vue'
 import LoadingVue from './index.vue'
 
 const LoadingConstructor = Vue.extend(LoadingVue)
+let instanceArray = [] // 实例列表
 
 const knLoading = {
   /**
@@ -9,11 +10,13 @@ const knLoading = {
    * @param {Object} [config]loading配置信息
    *
    * @param {String} [type = 'circular']类型
-   * @param {String} [shadow]背景色（支持css颜色写法）
+   * @param {String} [shadowColor]背景色（支持css颜色写法）
    * @param {Boolean} [shadowClose = false]背景点击是否可以关闭loading
-   * @param {String} [content = 'transparent']中心内容区域颜色（支持css颜色写法）
+   * @param {String} [contentColor = 'transparent']中心内容区域颜色（支持css颜色写法）
    * @param {String} [hint = '加载中...']中心内容区域文案
    * @param {Number} [time]至少n秒后关闭
+   * @param {String} [className = '']自定义类名
+   * @param {String} [lockScroll = true]是否在Loading出现时将body滚动锁定
    */
   open: (config = {}) => {
     // 这里处理一些各种loading的默认样式
@@ -24,15 +27,6 @@ const knLoading = {
     // if (lastLayer) document.body.removeChild(lastLayer)
 
     let data = Object.assign(defaults, config)
-
-    // 如果有最小显示的时间
-    if (data.time) {
-      knLoading.timeOut = false
-      setTimeout(() => {
-        knLoading.timeOut = true
-        knLoading.close(data.index)
-      }, data.time * 1000)
-    }
 
     // 使用LoadingConstructor()构造函数生成一个新的实例(虚拟dom)
     let instance = new LoadingConstructor({
@@ -46,6 +40,25 @@ const knLoading = {
       }
     })
 
+    // 如果有最小显示的时间
+    if (data.time) {
+      knLoading.timeOut = false
+      setTimeout(() => {
+        knLoading.timeOut = true
+        knLoading.close(data.index)
+      }, data.time * 1000)
+    }
+
+    if (data.lockScroll) {
+      document.body.classList.add('l-body-hidden')
+    }
+
+    // 将编号对应的示例对象，保存在数组中
+    let domObj = {}
+    domObj[data.index] = instance
+    instanceArray.push(domObj)
+    console.log(instanceArray)
+
     document.body.appendChild(instance.$el)
     return data.index
   },
@@ -55,6 +68,20 @@ const knLoading = {
    */
   close: index => {
     if (!knLoading.timeOut) return
+
+    // let sourceInstance // 目标值
+    let sourceInstanceIndex // 目标索引
+    for (let i = 0; i < instanceArray.length; i++) {
+      if (instanceArray[i][index]) {
+        // sourceInstance = instanceArray[i]
+        sourceInstanceIndex = i
+      }
+    }
+    instanceArray.splice(sourceInstanceIndex, 1)
+
+    if (instanceArray.length < 1) {
+      document.body.classList.remove('l-body-hidden')
+    }
     let loadingDom = document.querySelector(`#kn-loading.${index}`)
     document.body.removeChild(loadingDom)
   },
@@ -66,6 +93,7 @@ const knLoading = {
     for (var i = 0; i < loadingDoms.length; i++) {
       document.body.removeChild(loadingDoms[i])
     }
+    document.body.classList.remove('l-body-hidden')
   },
   /**
    * 倒计时是否完成
@@ -84,28 +112,31 @@ function getDefaultStyle(type = 'circular') {
     case 'circular':
       return {
         type: 'circular', // loading类型
-        shadow: '#fff', // 背景区域颜色
+        shadowColor: '#fff', // 背景区域颜色
         shadowClose: false,
-        content: 'transparent', // 中心内容区域颜色
+        contentColor: 'transparent', // 中心内容区域颜色
         hint: '加载中...', // 提示文案
+        lockScroll: true,
         index: 'index' + new Date().getTime() // 编号
       }
     case 'bubble':
       return {
         type: 'bubble', // loading类型
-        shadow: '', // 背景区域颜色
+        shadowColor: '', // 背景区域颜色
         shadowClose: false,
-        content: 'transparent', // 中心内容区域颜色
+        contentColor: 'transparent', // 中心内容区域颜色
         hint: '加载中...', // 提示文案
+        lockScroll: true,
         index: 'index' + new Date().getTime() // 编号
       }
     case 'spinner':
       return {
         type: 'spinner', // loading类型
-        shadow: 'transparent', // 背景区域颜色
+        shadowColor: 'transparent', // 背景区域颜色
         shadowClose: false,
-        content: 'rgba(0, 0, 0, .5)', // 中心内容区域颜色
+        contentColor: 'rgba(0, 0, 0, .5)', // 中心内容区域颜色
         hint: '加载中...', // 提示文案
+        lockScroll: true,
         index: 'index' + new Date().getTime() // 编号
       }
     default:

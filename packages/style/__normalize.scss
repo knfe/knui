@@ -92,23 +92,23 @@ i {
   font-style: normal;
 }
 
-.fl {
+.kn-fl {
   float: left;
 }
 
-.fr {
+.kn-fr {
   float: right;
 }
 
 /*清除浮动*/
 
-.clearfix:before,
-.clearfix:after {
+.kn-clearfix:before,
+.kn-clearfix:after {
   content: '';
   display: table;
 }
 
-.clearfix:after {
+.kn-clearfix:after {
   clear: both;
 }
 

@@ -28,11 +28,13 @@ this.$knLoading.open()
 
 ### open 方法 API
 
-| 参数        | 说明                              | 类型      | 默认值                  | 可选值                            |
-| ----------- | --------------------------------- | --------- | ----------------------- | --------------------------------- |
-| type        | Loading 类型                      | `String`  | `circular`              | `['circular','bubble','spinner']` |
-| shadow      | 背景色（支持 css 颜色写法）       | `String`  | 不同 loading 不同默认值 | -                                 |
-| shadowClose | 背景点击是否可以关闭 loading      | `Boolean` | `false`                 | -                                 |
-| content     | 内容区域颜色（支持 css 颜色写法） | `String`  | `transparent`           | -                                 |
-| hint        | 中心内容区域文案                  | `String`  | `加载中...`             | -                                 |
-| time        | 至少 n 秒后关闭                   | `Number`  | -                       | -                                 |
+| 参数         | 说明                              | 类型      | 默认值                  | 可选值                            |
+| ------------ | --------------------------------- | --------- | ----------------------- | --------------------------------- |
+| type         | Loading 类型                      | `String`  | `circular`              | `['circular','bubble','spinner']` |
+| hint         | 中心内容区域文案                  | `String`  | `加载中...`             | -                                 |
+| shadowColor  | 背景色（支持 css 颜色写法）       | `String`  | 不同 loading 不同默认值 | -                                 |
+| contentColor | 内容区域颜色（支持 css 颜色写法） | `String`  | `transparent`           | -                                 |
+| shadowClose  | 背景点击是否可以关闭 loading      | `Boolean` | `false`                 | -                                 |
+| time         | 至少 n 秒后关闭                   | `Number`  | -                       | -                                 |
+| className    | 自定义类名                        | `String`  | -                       | -                                 |
+| lockScroll   | 是否将 body 滚动锁定              | `Boolean` | `true`                  | -                                 |

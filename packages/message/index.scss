@@ -1,0 +1,124 @@
+/**
+ * kn-message component style
+ */
+@import '../style/index.scss';
+
+#kn-message {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100000;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  .message-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    width: px2rem(540/2);
+    // height: px2rem(446/2);
+    background-color: #fff;
+    border-radius: px2rem(10/2);
+
+    padding: px2rem(48/2) px2rem(40/2) px2rem(88/2);
+
+    .content-title {
+      font-size: px2rem(17);
+      color: #000;
+      margin-bottom: px2rem(15);
+    }
+
+    .content-message {
+      font-size: px2rem(15);
+      // color: #999;
+      margin-bottom: px2rem(15);
+      margin-bottom: px2rem(20);
+    }
+
+    .content-btn-wrap {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      // background-color: red;
+      width: 100%;
+      // height: px2rem(88/2);
+      line-height: px2rem(88/2);
+      font-weight: 400;
+      font-size: px2rem(17);
+      overflow: hidden;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        content: '';
+        border-top: 1px solid #eee;
+        transform: scaleY(0.5);
+      }
+
+      .content-btn-left {
+        width: 50%;
+        height: px2rem(88/2);
+        float: left;
+        // color: #999;
+      }
+
+      .content-btn-right {
+        width: 50%;
+        height: px2rem(88/2);
+        float: right;
+        // color: $kn-cl-primary;
+        position: relative;
+
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          content: '';
+          border-left: 1px solid #eee;
+          transform: scaleX(0.5);
+        }
+      }
+
+      .content-btn-only {
+        width: 100%;
+        // color: $kn-cl-primary;
+        border-radius: 0 0 px2rem(10/2) px2rem(10/2);
+      }
+
+      .loading-img {
+        width: 100%;
+        height: px2rem(44);
+        padding-top: px2rem(6);
+        border-radius: 0 0 px2rem(10/2) px2rem(10/2);
+
+        svg {
+          width: px2rem(33);
+          height: px2rem(33);
+          animation: rotate 1.5s linear infinite;
+        }
+      }
+
+      @keyframes rotate {
+        from {
+          transform: rotate(0);
+          transform-origin: center;
+        }
+        to {
+          transform: rotate(360deg);
+          transform-origin: center;
+        }
+      }
+    }
+  }
+}
