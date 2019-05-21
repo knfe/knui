@@ -49,6 +49,8 @@ Vue.component(KnButton.name, KnButton)
 
 [knLoading](./packages/loading/zh-CN.md)
 
+[knMessage](./packages/message/zh-CN.md)
+
 [knPullRefresh](./packages/pullRefresh/zh-CN.md)
 
 [KnButton](./packages/button/zh-CN.md)
