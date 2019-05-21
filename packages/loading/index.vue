@@ -1,5 +1,5 @@
 <template>
-  <div id="kn-loading" :class="index" @click="closeShadow" :style="`background-color: ${shadowColor}`">
+  <div id="kn-loading" :class="[index, className]" @click="closeShadow" :style="`background-color: ${shadowColor}`">
     <div class="loading-content" :style="`background-color: ${contentColor}`">
       <!-- circular-loading -->
       <div class="loading-circular" v-if="type === 'circular'">
@@ -114,4 +114,5 @@ export default {
 </script>
 <style lang="scss">
 @import './index.scss';
+
 </style>

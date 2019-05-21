@@ -117,6 +117,7 @@ function getDefaultStyle(type = 'circular') {
         contentColor: 'transparent', // 中心内容区域颜色
         hint: '加载中...', // 提示文案
         lockScroll: true,
+        className: '', // 自定义类名
         index: 'index' + new Date().getTime() // 编号
       }
     case 'bubble':
@@ -127,6 +128,7 @@ function getDefaultStyle(type = 'circular') {
         contentColor: 'transparent', // 中心内容区域颜色
         hint: '加载中...', // 提示文案
         lockScroll: true,
+        className: '', // 自定义类名
         index: 'index' + new Date().getTime() // 编号
       }
     case 'spinner':
@@ -137,6 +139,7 @@ function getDefaultStyle(type = 'circular') {
         contentColor: 'rgba(0, 0, 0, .5)', // 中心内容区域颜色
         hint: '加载中...', // 提示文案
         lockScroll: true,
+        className: '', // 自定义类名
         index: 'index' + new Date().getTime() // 编号
       }
     default:
