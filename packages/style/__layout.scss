@@ -1,8 +1,23 @@
-/** 
-* 全局布局样式
-* 以 .l 开头
-*/
-
-.l-body-hidden {
+.kn-body-hidden {
   overflow: hidden;
+}
+
+.kn-fl {
+  float: left;
+}
+
+.kn-fr {
+  float: right;
+}
+
+/*清除浮动*/
+
+.kn-clearfix:before,
+.kn-clearfix:after {
+  content: '';
+  display: table;
+}
+
+.kn-clearfix:after {
+  clear: both;
 }

@@ -69,7 +69,7 @@ const KnMessage = {
     })
 
     if (data.lockScroll) {
-      document.body.classList.add('l-body-hidden')
+      document.body.classList.add('kn-body-hidden-hidden')
     }
 
     // 将编号对应的示例对象，保存在数组中
@@ -104,7 +104,7 @@ const KnMessage = {
       document.body.removeChild(messageDom)
       instanceArray.splice(sourceInstanceIndex, 1)
       if (instanceArray.length < 1) {
-        document.body.classList.remove('l-body-hidden')
+        document.body.classList.remove('kn-body-hidden-hidden')
       }
     }, animateTime)
   },
@@ -122,7 +122,7 @@ const KnMessage = {
       messageDoms.forEach(v => {
         document.body.removeChild(v)
       })
-      document.body.classList.remove('l-body-hidden')
+      document.body.classList.remove('kn-body-hidden-hidden')
     }, animateTime)
   }
 }

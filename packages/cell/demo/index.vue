@@ -60,6 +60,11 @@ export default {
 </script>
 <style lang="scss">
 @import '../../style/index.scss';
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
 .kn-cell-demo {
   .f {
     width: 100%;

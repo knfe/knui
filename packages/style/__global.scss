@@ -1,19 +1,9 @@
-/** 
-* 全局公共变量
-* 以 .g (全局变量)、.fs (全局字体大小)、.s (size1 - ~) / .h (h1 - h6) / .cl (color) 等开头
-*/
-
-// 屏幕适配设置
-$htmlFontSize: 100;
-$htmlFontSizeVal: $htmlFontSize * 1px;
-$htmlMaxWidth: 768px;
-
 /**
  * 字体大小 10 号到 70 号字
  */
 
 @for $i from 10 through 70 {
-  .g-fs#{$i} {
+  .kn-fs#{$i} {
     font-size: px2rem($i);
   }
 }
@@ -22,7 +12,7 @@ $htmlMaxWidth: 768px;
  * margin-top 2 rem到 120 rem
  */
 @for $i from 0 through 120 {
-  .g-mt#{$i} {
+  .kn-mt#{$i} {
     margin-top: px2rem($i) !important;
   }
 }
@@ -31,7 +21,7 @@ $htmlMaxWidth: 768px;
  * margin-bottom 2 rem到 120 rem
  */
 @for $i from 0 through 120 {
-  .g-mb#{$i} {
+  .kn-mb#{$i} {
     margin-bottom: px2rem($i) !important;
   }
 }
@@ -40,7 +30,7 @@ $htmlMaxWidth: 768px;
  * margin-right 2 rem到 120 rem
  */
 @for $i from 0 through 120 {
-  .g-mr#{$i} {
+  .kn-mr#{$i} {
     margin-right: px2rem($i) !important;
   }
 }
@@ -49,7 +39,7 @@ $htmlMaxWidth: 768px;
  * margin-left 2 rem到 120 rem
  */
 @for $i from 0 through 120 {
-  .g-ml#{$i} {
+  .kn-ml#{$i} {
     margin-left: px2rem($i) !important;
   }
 }
@@ -58,7 +48,7 @@ $htmlMaxWidth: 768px;
  * padding-top 2 rem到 120 rem
  */
 @for $i from 2 through 120 {
-  .g-pt#{$i} {
+  .kn-pt#{$i} {
     padding-top: px2rem($i);
   }
 }
@@ -67,7 +57,7 @@ $htmlMaxWidth: 768px;
  * padding-bottom 2 rem到 120 rem
  */
 @for $i from 2 through 120 {
-  .g-pb#{$i} {
+  .kn-pb#{$i} {
     padding-bottom: px2rem($i);
   }
 }
@@ -76,7 +66,7 @@ $htmlMaxWidth: 768px;
  * padding-right 2 rem到 120 rem
  */
 @for $i from 2 through 120 {
-  .g-pr#{$i} {
+  .kn-pr#{$i} {
     padding-right: px2rem($i);
   }
 }
@@ -85,19 +75,63 @@ $htmlMaxWidth: 768px;
  * padding-left 2 rem到 120 rem
  */
 @for $i from 2 through 120 {
-  .g-pl#{$i} {
+  .kn-pl#{$i} {
     padding-left: px2rem($i);
   }
 }
 
-.g-tac {
+/**
+ * 文字居中形式
+ */
+.kn-tac {
   text-align: center;
 }
 
-.g-tal {
+.kn-tal {
   text-align: left;
 }
 
-.g-tar {
+.kn-tar {
   text-align: right;
+}
+
+/**
+ * 超出块的文字显示省略号，可以传入最大显示行数
+ */
+@for $i from 1 through 10 {
+  .kn-txt-cut#{$i} {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $i;
+    -webkit-box-orient: vertical;
+  }
+}
+
+// 下边框 100%
+.kn-bd-btm-100 {
+  position: relative;
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    content: '';
+    border-top: 1px solid #d8d8d8;
+    transform: scaleY(0.5) translateX(-50%);
+  }
+}
+
+// 下边框，靠右95宽
+.kn-bd-btm-95 {
+  position: relative;
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 95%;
+    content: '';
+    border-top: 1px solid #d8d8d8;
+    transform: scaleY(0.5);
+  }
 }

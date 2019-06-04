@@ -6,72 +6,7 @@
 @import '../style/index.scss';
 .kn-icon {
   display: inline-block;
-  width: px2rem(22);
-  height: px2rem(22);
-}
-
-.kn-icon.small {
-  width: px2rem(13);
-  height: px2rem(13);
-}
-
-.icon-city {
-  background: url('../assets/icon/icon-city.png') center center no-repeat;
-  background-size: contain;
-}
-
-.icon-face {
-  background: url('../assets/icon/icon-face.png') center center no-repeat;
-  background-size: contain;
-}
-
-.icon-location {
-  background: url('../assets/icon/icon-location.png') center center no-repeat;
-  background-size: contain;
-}
-
-.icon-user {
-  background: url('../assets/icon/icon-user.png') center center no-repeat;
-  background-size: contain;
-}
-
-.icon-info {
-  background: url('../assets/icon/icon-info.png') center center no-repeat;
-  background-size: contain;
-}
-
-.icon-phone {
-  background: url('../assets/icon/icon-phone.png') center center no-repeat;
-  background-size: contain;
-}
-
-.icon-chsi {
-  background: url('../assets/icon/icon-chsi.png') center center no-repeat;
-  background-size: contain;
-}
-
-.icon-lock-on {
-  background: url('../assets/icon/lock-on.png') center center no-repeat;
-  background-size: contain;
-}
-
-.icon-contact {
-  background: url('../assets/icon/icon-contact.png') center center no-repeat;
-  background-size: contain;
-}
-
-.icon-relation {
-  background: url('../assets/icon/icon-relation.png') center center no-repeat;
-  background-size: contain;
-}
-
-.icon-arrow-right {
-  background: url('../assets/icon/arrow-right.png') center center no-repeat;
-  background-size: contain;
-}
-
-.icon-arrow-down {
-  background: url('../assets/icon/arrow-right.png') center center no-repeat;
-  background-size: contain;
-  transform: rotate(90deg);
+  vertical-align: middle;
+  width: 0.12rem;
+  height: 0.12rem;
 }
