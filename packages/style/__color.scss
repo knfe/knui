@@ -28,8 +28,13 @@ $kn-cl-btn-active: #f06700; // 按钮激活颜色
 .kn-stroke-primary {
   stroke: $kn-cl-primary;
 }
+
+// 默认
 .kn-ft-default {
   color: $kn-cl-default;
+}
+.kn-ft-tertiary {
+  color: $kn-cl-tertiary;
 }
 /**
 * 背景主题色：

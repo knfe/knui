@@ -152,4 +152,21 @@ const message = {
   }
 }
 
-export default [ button, cell, icon, loading, progress, pullRefresh, radio, message, home ]
+const toast = {
+  path: '/demo/toast',
+  name: 'toast',
+  meta: {
+    title: 'toast组件'
+  },
+  component: resolve => {
+    require.ensure(
+      [],
+      () => {
+        resolve(require('@/toast/demo/index.vue'))
+      },
+      'toast'
+    )
+  }
+}
+
+export default [ home, button, cell, icon, loading, progress, pullRefresh, radio, message, toast ]

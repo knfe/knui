@@ -11,6 +11,7 @@ import KnPullRefresh from './pullRefresh/index.vue'
 import KnRadio from './radio/index.vue'
 import KnLoading from './loading/index.js'
 import KnMessage from './message/index.js'
+import KnToast from './toast/index.js'
 
 // package version
 const version = '0.5.2'
@@ -22,6 +23,7 @@ const install = function(Vue) {
   components.map(component => Vue.component(component.name, component))
   Vue.prototype.$knLoading = KnLoading
   Vue.prototype.$KnMessage = KnMessage
+  Vue.prototype.$KnToast = KnToast
 }
 
 if (typeof window !== 'undefined' && window.Vue) {

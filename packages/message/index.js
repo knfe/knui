@@ -19,7 +19,12 @@ const KnMessage = {
    * @param {Function} [rightBtnClick]右边按钮点击的回调函数，不写默认点击关闭
    * @param {String} [className='']自定义类名
    * @param {String} [lockScroll=true]是否在Message出现时将body滚动锁定
-   * @param {Boolean} [shadowClose = false]背景点击是否可以关闭Message
+   * @param {Boolean} [hasInput = false]是否有输入框
+   * @param {Boolean} [inputType = text]输入框类型
+   * @param {Boolean} [inputMaxlength]输入框最大输入
+   * @param {Boolean} [hasCountDown = false]是否有倒计时
+   * @param {Boolean} [countDownTime = 60]倒计时的时间
+   * @param {Function} [countDownClick]倒计时触发时的回调
    */
   open: config => {
     let defaults = {
@@ -32,8 +37,19 @@ const KnMessage = {
       shadowClose: false, // 背景点击是否可以关闭loading
       className: '', // 自定义类名
       lockScroll: true, // 是否在 Message 出现时将 body 滚动锁定
+      countDownTxt: '重新获取', // 倒计时文案
+      hasInput: false,
+      inputType: 'text',
+      inputMaxlength: '',
+      hasCountDown: false,
+      countDownTime: 60,
+      inputValue: '',
       index: 'index' + new Date().getTime() // 编号
     }
+
+    // 如果存在一个Message，先清除上一个
+    let lastMessage = document.querySelector(`#kn-message`)
+    if (lastMessage) document.body.removeChild(lastMessage)
 
     let data = Object.assign(defaults, config)
 
@@ -49,7 +65,7 @@ const KnMessage = {
           if (data.leftBtnCloseLoading) {
             this.leftLoading = true
           }
-          data.leftBtnClick()
+          data.leftBtnClick(this.inputValue)
         },
         rightClick() {
           if (typeof data.rightBtnClick !== 'function') {
@@ -59,11 +75,28 @@ const KnMessage = {
           if (data.rightBtnCloseLoading) {
             this.rightLoading = true
           }
-          data.rightBtnClick()
+          data.rightBtnClick(this.inputValue)
         },
         closeShadow() {
           if (!data.shadowClose) return
           KnMessage.close(data.index)
+        },
+        countDown() {
+          data.countDownClick()
+          let timer0
+          if (timer0) clearInterval(timer0)
+          let count = this.countDownTime
+
+          data.countDownTxt = `已发送(${count}s)`
+          timer0 = setInterval(() => {
+            count--
+            // console.log(count)
+            data.countDownTxt = `已发送(${count}s)`
+            if (count <= 0) {
+              clearInterval(timer0)
+              data.countDownTxt = `重新获取`
+            }
+          }, 1000)
         }
       }
     })
@@ -72,6 +105,8 @@ const KnMessage = {
       document.body.classList.add('kn-body-hidden-hidden')
     }
 
+    // instance.countDown(data.countDownTime)
+
     // 将编号对应的示例对象，保存在数组中
     let domObj = {}
     domObj[data.index] = instance
@@ -79,6 +114,7 @@ const KnMessage = {
 
     Vue.nextTick(() => {
       instance.visible = true
+      instance.countDown()
     })
 
     document.body.appendChild(instance.$el)

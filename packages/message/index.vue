@@ -2,12 +2,27 @@
   <transition name="kn-fade">
     <div id="kn-message" :class="[index, className]" v-show="visible" @click="closeShadow">
       <div class="message-content">
-        <div class="content-title">{{title}}</div>
-        <div class="content-message cl-tertiary">{{message}}</div>
+        <div class="content-title kn-ft-default" v-if="title">{{title}}</div>
+        <div class="content-message" :class="title ? 'kn-ft-tertiary': 'kn-ft-default'">{{message}}</div>
+        <div class="input-wrap" v-if="hasInput">
+          <input
+            class="input"
+            :type="inputType"
+            :class="hasCountDown ? 'w62p' : ''"
+            v-model="inputValue"
+            :maxlength="inputMaxlength"
+          >
+          <div
+            v-if="hasCountDown"
+            class="count-down"
+            :class="countDownTxt === '重新获取' ? 'kn-ft-primary' : 'kn-ft-tertiary'"
+            @click="countDown"
+          >{{ countDownTxt }}</div>
+        </div>
         <div class="content-btn-wrap">
           <div
             class="content-btn-left"
-            :class="btn.length === 1 ? 'content-btn-only cl-primary' : 'cl-tertiary'"
+            :class="btn.length === 1 ? 'content-btn-only cl-primary' : 'kn-ft-tertiary'"
             @click.stop="leftClick"
           >
             <span v-if="!leftLoading">{{ btn[0] }}</span>

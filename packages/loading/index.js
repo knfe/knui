@@ -22,9 +22,9 @@ const knLoading = {
     // 这里处理一些各种loading的默认样式
     let defaults = getDefaultStyle(config.type)
 
-    // 如果存在一个loading，则清除上一个 ---- 该功能待定
-    // let lastLayer = document.querySelector(`#kn-loading`)
-    // if (lastLayer) document.body.removeChild(lastLayer)
+    // 如果存在一个loading，则清除上一个
+    let lastLayer = document.querySelector(`#kn-loading`)
+    if (lastLayer) document.body.removeChild(lastLayer)
 
     let data = Object.assign(defaults, config)
 
