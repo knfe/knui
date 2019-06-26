@@ -52,8 +52,8 @@
 </template>
 <script>
 import KnMessage from '../index.js'
-import KnToast from '../../toast/index'
-// import KnLoading from '../../loading/index'
+// import KnToast from '../../toast/index'
+import KnLoading from '../../loading/index'
 export default {
   name: 'kn-message-demo',
   data() {
@@ -67,7 +67,7 @@ export default {
   mounted() {
     let index = KnMessage.open({
       title: '提示',
-      message: '贾君鹏，你妈妈喊你回家吃饭了，回家吃饭',
+      message: '贾君鹏，你妈妈喊你回家',
       btn: ['不好', '好的'],
       rightBtnCloseLoading: true,
       leftBtnClick: inputValue => {
@@ -76,18 +76,18 @@ export default {
       },
       rightBtnClick: inputValue => {
         console.log('好的', inputValue)
-        KnToast.open({
-          type: 'success'
+        // KnToast.open({
+        //   type: 'success'
+        // })
+        KnLoading.open({
+          type: 'spinner'
         })
       },
       hasInput: true,
       inputType: 'text',
-      inputMaxlength: 3,
+      inputMaxlength: 6,
       hasCountDown: true,
-      countDownTime: 10,
-      countDownClick() {
-        console.log('触发倒计时')
-      }
+      countDownTime: 30
     })
     // let index1 = KnMessage.open({
     //   title: 'xx',

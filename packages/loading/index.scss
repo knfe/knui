@@ -315,15 +315,10 @@
         width: px2rem(72/2);
         height: px2rem(72/2);
         margin: px2rem(56/2) auto 0;
-        animation: rotate 1s linear infinite;
-        // background-color: red;
-
         svg {
-          width: 100%;
-          height: 100%;
-          // animation: rotate 1s linear infinite;
+          width: px2rem(72/2);
+          height: px2rem(72/2);
         }
-        font-family: 'PingFang SC';
       }
 
       // 提示文案
@@ -334,17 +329,92 @@
         margin-top: px2rem(10);
         font-size: px2rem(14);
       }
-
-      @keyframes rotate {
+      .change1 {
+        animation: change 1s linear infinite;
+      }
+      .change2 {
+        animation: change 1s linear infinite 0.125s;
+      }
+      .change3 {
+        animation: change 1s linear infinite 0.25s;
+      }
+      .change4 {
+        animation: change 1s linear infinite 0.375s;
+      }
+      .change5 {
+        animation: change 1s linear infinite 0.5s;
+      }
+      .change6 {
+        animation: change 1s linear infinite 0.625s;
+      }
+      .change7 {
+        animation: change 1s linear infinite 0.75s;
+      }
+      .change8 {
+        animation: change 1s linear infinite 0.875s;
+      }
+      @keyframes change {
         from {
-          transform: rotate(0);
-          transform-origin: center;
+          fill-opacity: 1;
         }
         to {
-          transform: rotate(360deg);
-          transform-origin: center;
+          fill-opacity: 0.2;
         }
       }
+
+      // @keyframes rotate {
+      //   0% {
+      //     transform: rotate(0deg);
+      //   }
+      //   12.5% {
+      //     transform: rotate(0deg);
+      //   }
+      //   12.51% {
+      //     transform: rotate(45deg);
+      //   }
+      //   25% {
+      //     transform: rotate(45deg);
+      //   }
+      //   25.01% {
+      //     transform: rotate(90deg);
+      //   }
+      //   37.5% {
+      //     transform: rotate(90deg);
+      //   }
+      //   37.51% {
+      //     transform: rotate(135deg);
+      //   }
+      //   50% {
+      //     transform: rotate(135deg);
+      //   }
+      //   50.01% {
+      //     transform: rotate(180deg);
+      //   }
+      //   62.5% {
+      //     transform: rotate(180deg);
+      //   }
+      //   62.51% {
+      //     transform: rotate(225deg);
+      //   }
+      //   75% {
+      //     transform: rotate(225deg);
+      //   }
+      //   75.01% {
+      //     transform: rotate(270deg);
+      //   }
+      //   87.5% {
+      //     transform: rotate(270deg);
+      //   }
+      //   87.51% {
+      //     transform: rotate(315deg);
+      //   }
+      //   99.99% {
+      //     transform: rotate(315deg);
+      //   }
+      //   100% {
+      //     transform: rotate(360deg);
+      //   }
+      // }
     }
   }
 }

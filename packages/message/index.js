@@ -82,7 +82,9 @@ const KnMessage = {
           KnMessage.close(data.index)
         },
         countDown() {
-          data.countDownClick()
+          if (typeof data.countDownClick === 'function') {
+            data.countDownClick()
+          }
           let timer0
           if (timer0) clearInterval(timer0)
           let count = this.countDownTime

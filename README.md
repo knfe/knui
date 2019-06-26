@@ -51,6 +51,8 @@ Vue.component(KnButton.name, KnButton)
 
 [knMessage](./packages/message/zh-CN.md)
 
+[KnToast](./packages/toast/zh-CN.md)
+
 [knPullRefresh](./packages/pullRefresh/zh-CN.md)
 
 [KnButton](./packages/button/zh-CN.md)

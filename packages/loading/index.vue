@@ -30,18 +30,18 @@
         <div class="loading-img">
           <svg width="72px" height="72px" viewBox="0 0 72 72" version="1.1">
             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-              <g transform="translate(-1405.000000, -1146.000000)" fill="#FFFFFF">
-                  <g transform="translate(1405.000000, 1146.000000)">
-                      <rect x="34" y="0" width="4" height="18" rx="2"></rect>
-                      <rect fill-opacity="0.15" transform="translate(54.778175, 16.778175) rotate(45.000000) translate(-54.778175, -16.778175) " x="52.7781746" y="7.77817459" width="4" height="18" rx="2"></rect>
-                      <rect fill-opacity="0.3" transform="translate(63.000000, 36.000000) rotate(90.000000) translate(-63.000000, -36.000000) " x="61" y="27" width="4" height="18" rx="2"></rect>
-                      <rect fill-opacity="0.45" transform="translate(54.778175, 54.778175) rotate(135.000000) translate(-54.778175, -54.778175) " x="52.7781746" y="45.7781746" width="4" height="18" rx="2"></rect>
-                      <rect fill-opacity="0.6" transform="translate(36.000000, 63.000000) rotate(180.000000) translate(-36.000000, -63.000000) " x="34" y="54" width="4" height="18" rx="2"></rect>
-                      <rect fill-opacity="0.75" transform="translate(16.778175, 54.778175) rotate(225.000000) translate(-16.778175, -54.778175) " x="14.7781746" y="45.7781746" width="4" height="18" rx="2"></rect>
-                      <rect fill-opacity="0.9" transform="translate(9.000000, 36.000000) rotate(270.000000) translate(-9.000000, -36.000000) " x="7" y="27" width="4" height="18" rx="2"></rect>
-                      <rect transform="translate(16.778175, 16.778175) rotate(315.000000) translate(-16.778175, -16.778175) " x="14.7781746" y="7.77817459" width="4" height="18" rx="2"></rect>
-                  </g>
-              </g>
+                <g transform="translate(-1405.000000, -1149.000000)" fill="#FFFFFF">
+                    <g transform="translate(1405.000000, 1149.000000)">
+                        <rect class="change1" id="矩形" x="34" y="0" width="4" height="18" rx="2"></rect>
+                        <rect class="change2" id="矩形" fill-opacity="0.15" transform="translate(55.091883, 16.908117) rotate(45.000000) translate(-55.091883, -16.908117) " x="53.0918831" y="7.90811691" width="4" height="18" rx="2"></rect>
+                        <rect class="change3" id="矩形" fill-opacity="0.3" transform="translate(63.000000, 36.000000) rotate(90.000000) translate(-63.000000, -36.000000) " x="61" y="27" width="4" height="18" rx="2"></rect>
+                        <rect class="change4" id="矩形" fill-opacity="0.45" transform="translate(55.091883, 55.091883) rotate(135.000000) translate(-55.091883, -55.091883) " x="53.0918831" y="46.0918831" width="4" height="18" rx="2"></rect>
+                        <rect class="change5" id="矩形" fill-opacity="0.6" transform="translate(36.000000, 63.000000) rotate(180.000000) translate(-36.000000, -63.000000) " x="34" y="54" width="4" height="18" rx="2"></rect>
+                        <rect class="change6" id="矩形" fill-opacity="0.75" transform="translate(16.908117, 55.091883) rotate(225.000000) translate(-16.908117, -55.091883) " x="14.9081169" y="46.0918831" width="4" height="18" rx="2"></rect>
+                        <rect class="change7" id="矩形" fill-opacity="0.9" transform="translate(9.000000, 36.000000) rotate(270.000000) translate(-9.000000, -36.000000) " x="7" y="27" width="4" height="18" rx="2"></rect>
+                        <rect class="change8" id="矩形" transform="translate(16.908117, 16.908117) rotate(315.000000) translate(-16.908117, -16.908117) " x="14.9081169" y="7.90811691" width="4" height="18" rx="2"></rect>
+                    </g>
+                </g>
             </g>
           </svg>
         </div>
