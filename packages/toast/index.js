@@ -50,7 +50,7 @@ const KnToast = {
     let domObj = {}
     domObj[data.index] = instance
     instanceArray.push(domObj)
-    console.log(instanceArray)
+    // console.log(instanceArray)
 
     document.body.appendChild(instance.$el)
     return data.index
