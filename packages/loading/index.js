@@ -50,7 +50,7 @@ const knLoading = {
     }
 
     if (data.lockScroll) {
-      document.body.classList.add('kn-body-hidden-hidden')
+      document.body.classList.add('kn-body-hidden')
     }
 
     // 将编号对应的示例对象，保存在数组中
@@ -80,7 +80,7 @@ const knLoading = {
     instanceArray.splice(sourceInstanceIndex, 1)
 
     if (instanceArray.length < 1) {
-      document.body.classList.remove('kn-body-hidden-hidden')
+      document.body.classList.remove('kn-body-hidden')
     }
     let loadingDom = document.querySelector(`#kn-loading.${index}`)
     document.body.removeChild(loadingDom)
@@ -93,7 +93,7 @@ const knLoading = {
     for (var i = 0; i < loadingDoms.length; i++) {
       document.body.removeChild(loadingDoms[i])
     }
-    document.body.classList.remove('kn-body-hidden-hidden')
+    document.body.classList.remove('kn-body-hidden')
   },
   /**
    * 倒计时是否完成

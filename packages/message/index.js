@@ -104,7 +104,7 @@ const KnMessage = {
     })
 
     if (data.lockScroll) {
-      document.body.classList.add('kn-body-hidden-hidden')
+      document.body.classList.add('kn-body-hidden')
     }
 
     // instance.countDown(data.countDownTime)
@@ -142,7 +142,7 @@ const KnMessage = {
       document.body.removeChild(messageDom)
       instanceArray.splice(sourceInstanceIndex, 1)
       if (instanceArray.length < 1) {
-        document.body.classList.remove('kn-body-hidden-hidden')
+        document.body.classList.remove('kn-body-hidden')
       }
     }, animateTime)
   },
@@ -160,7 +160,7 @@ const KnMessage = {
       messageDoms.forEach(v => {
         document.body.removeChild(v)
       })
-      document.body.classList.remove('kn-body-hidden-hidden')
+      document.body.classList.remove('kn-body-hidden')
     }, animateTime)
   }
 }

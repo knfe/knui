@@ -22,7 +22,7 @@
         <div class="content-btn-wrap">
           <div
             class="content-btn-left"
-            :class="btn.length === 1 ? 'content-btn-only cl-primary' : 'kn-ft-tertiary'"
+            :class="btn.length === 1 ? 'content-btn-only kn-ft-primary' : 'kn-ft-tertiary'"
             @click.stop="leftClick"
           >
             <span v-if="!leftLoading">{{ btn[0] }}</span>
@@ -99,7 +99,7 @@
               </svg>
             </div>
           </div>
-          <div class="content-btn-right cl-primary" v-if="btn[1]" @click.stop="rightClick">
+          <div class="content-btn-right kn-ft-primary" v-if="btn[1]" @click.stop="rightClick">
             <span v-if="!rightLoading">{{ btn[1] }}</span>
             <div v-else class="loading-img">
               <svg

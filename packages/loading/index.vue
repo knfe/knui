@@ -3,7 +3,7 @@
     <div class="loading-content" :style="`background-color: ${contentColor}`">
       <!-- circular-loading -->
       <div class="loading-circular" v-if="type === 'circular'">
-        <div class="spinner-wrap cl-primary">
+        <div class="spinner-wrap kn-ft-primary">
           <div class="spinner">
             <div class="circle-clipper left">
               <div class="circle"></div>

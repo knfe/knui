@@ -22,8 +22,8 @@ const install = function(Vue) {
   if (install.installed) return
   components.map(component => Vue.component(component.name, component))
   Vue.prototype.$knLoading = KnLoading
-  Vue.prototype.$KnMessage = KnMessage
-  Vue.prototype.$KnToast = KnToast
+  Vue.prototype.$knMessage = KnMessage
+  Vue.prototype.$knToast = KnToast
 }
 
 if (typeof window !== 'undefined' && window.Vue) {

@@ -1,5 +1,6 @@
 // 颜色文件
 // 所有颜色变量
+
 $kn-cl-primary: #ff6300; // 主题色
 $kn-cl-secondary1: #ffb500; // 辅助色
 $kn-cl-secondary2: #6fc93e; // 辅助色
@@ -21,6 +22,7 @@ $kn-cl-btn-active: #f06700; // 按钮激活颜色
 */
 .kn-ft-primary {
   color: $kn-cl-primary;
+  fill: $kn-cl-primary;
 }
 .kn-fill-primary {
   fill: $kn-cl-primary;

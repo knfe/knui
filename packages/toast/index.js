@@ -75,7 +75,7 @@ const KnToast = {
       document.body.removeChild(toastDom)
       instanceArray.splice(sourceInstanceIndex, 1)
       if (instanceArray.length < 1) {
-        document.body.classList.remove('kn-body-hidden-hidden')
+        document.body.classList.remove('kn-body-hidden')
       }
     }, animateTime)
   },
@@ -93,7 +93,7 @@ const KnToast = {
       toastDoms.forEach(v => {
         document.body.removeChild(v)
       })
-      document.body.classList.remove('kn-body-hidden-hidden')
+      document.body.classList.remove('kn-body-hidden')
     }, animateTime)
   }
 }
