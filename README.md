@@ -47,6 +47,8 @@ Vue.component(KnButton.name, KnButton)
 
 ## 组件
 
+### 目前可用组件
+
 [knLoading](./packages/loading/zh-CN.md)
 
 [knMessage](./packages/message/zh-CN.md)
@@ -55,6 +57,8 @@ Vue.component(KnButton.name, KnButton)
 
 [knPullRefresh](./packages/pullRefresh/zh-CN.md)
 
+### 调试中组件
+
 [KnButton](./packages/button/zh-CN.md)
 
 [KnCell](./packages/cell/zh-CN.md)
@@ -62,7 +66,5 @@ Vue.component(KnButton.name, KnButton)
 [KnIcon](./packages/icon/zh-CN.md)
 
 [KnProgress](./packages/progress/zh-CN.md)
-
-[KnPullRefresh](./packages/pullRefresh/zh-CN.md)
 
 [KnRadio](./packages/radio/zh-CN.md)

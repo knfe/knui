@@ -32,6 +32,7 @@ this.$knMessage.open()
 | ------------------------- | ------------------------------------------------- | --------- | ---------------------- | ------ |
 | title                     | Message 标题                                      | `String`  | 空                     | -      |
 | message                   | Message 内容                                      | `String`  | `这里需要填写提示内容` | -      |
+| shadowClose               | 背景点击是否可以关闭 loading                      | `Boolean` | `false`                | -      |
 | btn                       | 按钮文案                                          | `Array`   | `[]`                   | -      |
 | leftBtnCloseLoading       | 左按钮点击时是否有 loading 效果                   | `Boolean` | `false`                | -      |
 | rightBtnCloseLoading      | 右按钮点击时是否有 loading 效果                   | `Boolean` | `false`                | -      |
