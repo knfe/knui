@@ -1,28 +1,28 @@
-// 颜色文件
 // 所有颜色变量
 
-$kn-cl-primary: #ff6300; // 主题色
-$kn-cl-secondary1: #ffb500; // 辅助色
-$kn-cl-secondary2: #6fc93e; // 辅助色
-$kn-cl-default: #333; // 暗灰（标题，重要）
-$kn-cl-tertiary: #999; // 中灰（副标题）
-$kn-cl-placeholder: #bababa; // 浅灰,输入内容占位提示
-$kn-cl-disabled: #e4e4e4; // 淡灰（不可点击）
-$kn-cl-link: #4a90e2; // 链接颜色
-$kn-cl-important: #ff6262; // 重要提示 - 辅助色
-$kn-cl-danger: #f00; // 危险操作
-$kn-cl-success: #69c959; // 成功操作
-$kn-cl-warning: #ffb844; // 警告
-$kn-cl-bg: #f8f8f8; // 默认背景色
-$kn-cl-btn-active: #f06700; // 按钮激活颜色
+// 主题色
+$kn-cl-primary: #ff6300;
+// 中性色
+$kn-cl-default: #333; // 暗灰（用于导航标题、重要标题、重要文本）
+$kn-cl-secondary: #333; // 暗灰（用于次要标题、次要文本）
+$kn-cl-tertiary: #999; // 中灰（用于列表标题、次要文本、提示文本、弹窗正文、声明/备注文本）
+$kn-cl-tabbar: #bababa; // 极少使用（用于底部Tab栏icon）
+$kn-cl-disabled: #d4d4d4; // 淡灰（用于置灰按钮/icon/文本、内容占位文本、优惠券列表、深色分割线(页面分割较少的情况)）
+$kn-cl-separate: #eee; // 浅色分割线(页面分割较多的情况)
+$kn-cl-bg-default: #f5f5f5; // 默认背景色、卡片色
+$kn-cl-white: #fff; // 白色
+// 辅助色
+$kn-cl-success: #23c78e; // 成功操作
+$kn-cl-danger: #ff6262; // 危险操作（用于icon、标签、提示性文本气泡、小红点、报错、警告）
+$kn-cl-warning: #ffc625; // 警告
+$kn-cl-link: #0089ec; // 链接颜色
 
 /**
-* 文字主题色：
+* 文字主题色：      
 * .kn-ft 开头
 */
 .kn-ft-primary {
   color: $kn-cl-primary;
-  fill: $kn-cl-primary;
 }
 .kn-fill-primary {
   fill: $kn-cl-primary;
@@ -45,54 +45,6 @@ $kn-cl-btn-active: #f06700; // 按钮激活颜色
 .kn-bg-primary {
   background-color: $kn-cl-primary;
 }
-
-// 记得弃用-------------------------
-/**
-* 全局颜色相关样式：
-* .cl 开头
-*/
-.cl-primary {
-  color: #ff7015;
-  fill: #ff7015;
-}
-
-.cl-secondary1 {
-  color: #ffb500;
-  fill: #ffb500;
-}
-.cl-secondary2 {
-  color: #6fc93e;
-}
-.cl-default {
-  color: #333;
-}
-.cl-tertiary {
-  color: #999;
-}
-.cl-placeholder {
-  color: #bababa;
-}
-.cl-disabled {
-  color: #e4e4e4;
-}
-.cl-link {
-  color: #4a90e2;
-}
-.cl-important {
-  color: #ff6262;
-}
-.cl-danger {
-  color: #f00;
-}
-.cl-success {
-  color: #69c959;
-}
-.cl-warning {
-  color: #ffb844;
-}
-.cl-bg {
-  color: #f8f8f8;
-}
-.cl-btn-active {
-  color: #f06700;
+.kn-bg-white {
+  background-color: $kn-cl-white;
 }

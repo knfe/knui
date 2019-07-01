@@ -60,21 +60,19 @@ export default {
     }
   },
   created() {
-    console.log(this.$knLoading)
-
-    // let index = this.$knLoading.open({ type: 'circular', shadowClose: true })
+    knLoading.open({ type: 'circular', shadowClose: true })
     // console.log(index)
     // setTimeout(() => {
     //   this.$knLoading.close(index)
     // }, 2000)
     // // knLoading.open({ type: 'circular' })
-    let index = knLoading.open({ type: 'bubble' })
-    let index1 = knLoading.open({ type: 'spinner', className: 'loadingx' })
-    setTimeout(() => {
-      knLoading.close(index)
-      knLoading.close(index1)
-      // knLoading.closeAll()
-    }, 2000)
+    // let index = knLoading.open({ type: 'bubble' })
+    // let index1 = knLoading.open({ type: 'spinner', className: 'loadingx' })
+    // setTimeout(() => {
+    //   knLoading.close(index)
+    //   knLoading.close(index1)
+    //   // knLoading.closeAll()
+    // }, 2000)
   },
   components: {
     // app
