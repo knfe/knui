@@ -31,7 +31,7 @@ const KnMessage = {
       visible: false, // message是否可见(用于过渡)
       title: '', // message标题
       message: '这里需要填写提示内容', // message内容
-      btn: [], // message按钮
+      btn: ['确认'], // message按钮
       leftLoading: false, // 是否加载loading
       rightLoading: false, // 是否加载loading
       shadowClose: false, // 背景点击是否可以关闭loading
