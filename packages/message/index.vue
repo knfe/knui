@@ -180,39 +180,10 @@
   </transition>
 </template>
 <script>
+import { mixins } from '../utils/porps.mixin'
 export default {
-  name: 'kn-message'
-  // props: {
-  //   visible: {
-  //     default: true
-  //   },
-  //   title: {
-  //     default: ''
-  //   },
-  //   message: {
-  //     default: ''
-  //   },
-  //   btn: {
-  //     default: []
-  //   },
-  //   leftLoading: {
-  //     default: false
-  //   },
-  //   rightLoading: {
-  //     default: false
-  //   },
-  //   index: {
-  //     default: ''
-  //   },
-  //   className: {
-  //     default: ''
-  //   }
-  // },
-  // methods: {
-  //   leftClick() {},
-  //   rightClick() {},
-  //   closeShadow() {}
-  // }
+  name: 'kn-message',
+  mixins: [mixins]
 }
 </script>
 <style lang="scss">

@@ -8,23 +8,23 @@ const animateTime = 500 // 动画时间/单位ms
 const KnMessage = {
   /**
    * 打开新的message
-   * @param {Object} [config]loading配置信息
+   * @param {Object} [config] loading配置信息
    *
    * @param {String} [title = '温馨提示']
    * @param {String} [message = '这里需要填写提示内容']
-   * @param {Array} [btn = []]按钮文案，填写一个只有一个leftBtn，填写2个为leftBtn，rightBtn
-   * @param {Boolean} [leftBtnCloseLoading = false]左边按钮点击时是否有loading效果
-   * @param {Boolean} [rightBtnCloseLoading = false]右边按钮点击时是否有loading效果
-   * @param {Function} [leftBtnClick]左边按钮点击的回调函数，不写默认点击关闭
-   * @param {Function} [rightBtnClick]右边按钮点击的回调函数，不写默认点击关闭
-   * @param {String} [className='']自定义类名
-   * @param {String} [lockScroll=true]是否在Message出现时将body滚动锁定
-   * @param {Boolean} [hasInput = false]是否有输入框
-   * @param {Boolean} [inputType = text]输入框类型
-   * @param {Boolean} [inputMaxlength]输入框最大输入
-   * @param {Boolean} [hasCountDown = false]是否有倒计时
-   * @param {Boolean} [countDownTime = 60]倒计时的时间
-   * @param {Function} [countDownClick]倒计时触发时的回调
+   * @param {Array} [btn = []] 按钮文案，填写一个只有一个leftBtn，填写2个为leftBtn，rightBtn
+   * @param {Boolean} [leftBtnCloseLoading = false] 左边按钮点击时是否有loading效果
+   * @param {Boolean} [rightBtnCloseLoading = false] 右边按钮点击时是否有loading效果
+   * @param {Function} [leftBtnClick] 左边按钮点击的回调函数，不写默认点击关闭
+   * @param {Function} [rightBtnClick] 右边按钮点击的回调函数，不写默认点击关闭
+   * @param {String} [className=''] 自定义类名
+   * @param {String} [lockScroll=true] 是否在Message出现时将body滚动锁定
+   * @param {Boolean} [hasInput = false] 是否有输入框
+   * @param {Boolean} [inputType = text] 输入框类型
+   * @param {Boolean} [inputMaxlength] 输入框最大输入
+   * @param {Boolean} [hasCountDown = false] 是否有倒计时
+   * @param {Boolean} [countDownTime = 60] 倒计时的时间
+   * @param {Function} [countDownClick] 倒计时触发时的回调
    */
   open: config => {
     let defaults = {
@@ -124,7 +124,7 @@ const KnMessage = {
   },
   /**
    * 关闭指定的Message
-   * @param {String} [index]loading编号
+   * @param {String} [index] loading编号
    */
   close: index => {
     let messageDom = document.querySelector(`#kn-message.${index}`)
