@@ -31,7 +31,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 // export components
-export { KnButton, KnCell, KnIcon, KnProgress, KnPullRefresh, KnRadio }
+export { KnButton, KnCell, KnIcon, KnProgress, KnPullRefresh, KnRadio, KnLoading, KnMessage, KnToast }
 
 // export default
 export default {
