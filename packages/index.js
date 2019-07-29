@@ -3,15 +3,15 @@
  */
 
 // import packages
-import KnButton from './button/src/'
-import KnCell from './cell/src/'
-import KnIcon from './icon/src/'
-import KnProgress from './progress/src/'
-import KnPullRefresh from './pullRefresh/src/'
-import KnRadio from './radio/src/'
-import KnLoading from './loading/src/main.js/src/'
-import KnMessage from './message/src/main.js/src/'
-import KnToast from './toast/src/main.js/src/'
+import KnButton from './button/src'
+import KnCell from './cell/src'
+import KnIcon from './icon/src'
+import KnProgress from './progress/src'
+import KnPullRefresh from './pullRefresh/src'
+import KnRadio from './radio/src'
+import KnLoading from './loading/src/main.js/src'
+import KnMessage from './message/src/main.js/src'
+import KnToast from './toast/src/main.js/src'
 
 // package version
 const version = '0.5.2'
