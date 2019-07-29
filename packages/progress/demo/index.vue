@@ -44,7 +44,7 @@ export default {
       msg: 'kn-progress-demo',
       progressBtnTextc1: [
         { text: '步骤1', textColor: '#f9c', bgColor: '#f9c' },
-        { text: '步骤2', img: require('../images/current-icon.png') },
+        { text: '步骤2', img: require('../src/images/current-icon.png') },
         { text: '步骤3' },
         { text: '步骤4' }
       ],
@@ -56,19 +56,19 @@ export default {
       ],
       progressBtnTextc3: [
         { text: '步骤1', bgColor: 'yellow' },
-        { text: '步骤2', img: require('../images/current-icon.png'), bgColor: 'yellow' },
+        { text: '步骤2', img: require('../src/images/current-icon.png'), bgColor: 'yellow' },
         { text: '步骤3', bgColor: 'yellow' },
         { text: '步骤4' }
       ],
       progressBtnTextc4: [
         { text: '步骤1' },
-        { text: '步骤2', img: require('../images/current-icon.png') },
+        { text: '步骤2', img: require('../src/images/current-icon.png') },
         { text: '步骤3' },
         { text: '步骤4' }
       ],
       progressBtnText: [
         { text: '步骤1' },
-        { text: '步骤2', img: require('../images/current-icon.png') },
+        { text: '步骤2', img: require('../src/images/current-icon.png') },
         { text: '步骤3' },
         { text: '步骤4' }
       ],
@@ -81,44 +81,44 @@ export default {
       // 注意：这个是数据结构示范，背景图标只限于当前这个步骤，配置的位置要注意，需要哪个配哪个，不需要的不做配置
       // 可以自己换需要的背景图标，每一种当前步骤状态都可以用特定的背景图标，以下分别是每个步骤的
       progressBtnTextAccelerate1: [
-        { text: '步骤1', img: require('../images/current-icon.png') },
+        { text: '步骤1', img: require('../src/images/current-icon.png') },
         { text: '步骤2' },
         { text: '步骤3' },
         { text: '步骤4' }
       ],
       progressBtnTextAccelerate2: [
         { text: '步骤1' },
-        { text: '步骤2', img: require('../images/current-icon.png') },
+        { text: '步骤2', img: require('../src/images/current-icon.png') },
         { text: '步骤3' },
         { text: '步骤4' }
       ],
       progressBtnTextAccelerate3: [
         { text: '步骤1' },
         { text: '步骤2' },
-        { text: '步骤3', img: require('../images/current-icon.png') },
+        { text: '步骤3', img: require('../src/images/current-icon.png') },
         { text: '步骤4' }
       ],
       progressBtnTextAccelerate4: [
         { text: '步骤1' },
         { text: '步骤2' },
         { text: '步骤3' },
-        { text: '步骤4', img: require('../images/current-icon.png') }
+        { text: '步骤4', img: require('../src/images/current-icon.png') }
       ],
       // 注意：若每个步骤都有背景图标，则里面传字段不能少，具体需求里面可以按自己需求改图标
       progressBtnText1: [
-        { text: '步骤1', img: require('../images/step-info-1.png') },
-        { text: '步骤2', img: require('../images/step-info-2.png') },
-        { text: '步骤3', img: require('../images/step-info-3.png') }
+        { text: '步骤1', img: require('../src/images/step-info-1.png') },
+        { text: '步骤2', img: require('../src/images/step-info-2.png') },
+        { text: '步骤3', img: require('../src/images/step-info-3.png') }
       ],
       progressBtnTextc5: [
-        { text: '步骤1', img: require('../images/step-info-1.png'), bgColor: '#f9c', textColor: '#f9c' },
-        { text: '步骤2', img: require('../images/step-info-2.png') },
-        { text: '步骤3', img: require('../images/step-info-3.png') }
+        { text: '步骤1', img: require('../src/images/step-info-1.png'), bgColor: '#f9c', textColor: '#f9c' },
+        { text: '步骤2', img: require('../src/images/step-info-2.png') },
+        { text: '步骤3', img: require('../src/images/step-info-3.png') }
       ],
       progressBtnTextc6: [
-        { text: '步骤1', img: require('../images/step-info-1.png'), bgColor: '#6fc93e', textColor: '#6fc93e' },
-        { text: '步骤2', img: require('../images/step-info-2.png'), bgColor: '#6fc93e', textColor: '#6fc93e' },
-        { text: '步骤3', img: require('../images/step-info-3.png') }
+        { text: '步骤1', img: require('../src/images/step-info-1.png'), bgColor: '#6fc93e', textColor: '#6fc93e' },
+        { text: '步骤2', img: require('../src/images/step-info-2.png'), bgColor: '#6fc93e', textColor: '#6fc93e' },
+        { text: '步骤3', img: require('../src/images/step-info-3.png') }
       ]
     }
   },

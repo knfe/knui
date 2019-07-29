@@ -1,10 +1,10 @@
 /**
  * kn-cell component style
  */
-@import '../style/index.scss';
+@import '../../style/index.scss';
 
 .kn-cell {
-  @import '../style/__normalize.scss';
+  @import '../../style/__normalize.scss';
 
   position: relative;
   box-sizing: border-box;

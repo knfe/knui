@@ -3,7 +3,7 @@
  */
 
 import Vue from 'vue'
-import app from './index.vue'
+import app from './main.vue'
 
 new Vue({
   render: h => h(app)

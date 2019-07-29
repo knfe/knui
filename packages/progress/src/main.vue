@@ -2,11 +2,24 @@
   <div class="kn-progress">
     <!-- 兼容每个步骤都有背景图标的（图标可以自己配置），当前步骤有背景图标的，每个步骤都是镂空圆的情况  -->
     <div class="progress-div" :class="{'info-step-div': useStepIcon}">
-      <div v-for="(item, index) in progressBtnText" :key="index" class="step" :class="{'active': index < step, 'current': index === step && !accelerate}">
-        <p class="circle" :class="{'acceleratecircle': accelerate && index === step}" :style="{'background-color': index === step && !useStepIcon ? '' : item.bgColor, 'borderColor': item.bgColor}">
-          <img v-if="accelerate || useStepIcon" :src="item.img" class="circle-img" alt="">
+      <div
+        v-for="(item, index) in progressBtnText"
+        :key="index"
+        class="step"
+        :class="{'active': index < step, 'current': index === step && !accelerate}"
+      >
+        <p
+          class="circle"
+          :class="{'acceleratecircle': accelerate && index === step}"
+          :style="{'background-color': index === step && !useStepIcon ? '' : item.bgColor, 'borderColor': item.bgColor}"
+        >
+          <img v-if="accelerate || useStepIcon" :src="item.img" class="circle-img" alt />
         </p>
-        <p class="text" :class="{'accelerateCurrentText': accelerate && index === step}" :style="{'color': item.textColor}">{{item.text}}</p>
+        <p
+          class="text"
+          :class="{'accelerateCurrentText': accelerate && index === step}"
+          :style="{'color': item.textColor}"
+        >{{item.text}}</p>
         <span class="line" :style="{'background-color': index < step ? item.bgColor : ''}"></span>
       </div>
     </div>
@@ -36,5 +49,5 @@ export default {
 }
 </script>
 <style lang="scss">
-@import "./index.scss";
+@import './main.scss';
 </style>

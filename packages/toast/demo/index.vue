@@ -64,7 +64,7 @@
   </div>
 </template>
 <script>
-import KnToast from '../index.js'
+import KnToast from '../'
 export default {
   name: 'kn-toast-demo',
   data() {

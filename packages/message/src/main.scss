@@ -1,10 +1,10 @@
 /**
  * kn-message component style
  */
-@import '../style/index.scss';
+@import '../../style/index.scss';
 
 #kn-message {
-  @import '../style/__normalize.scss';
+  @import '../../style/__normalize.scss';
   width: 100%;
   height: 100%;
   position: fixed;

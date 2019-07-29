@@ -51,7 +51,7 @@
   </div>
 </template>
 <script>
-import KnMessage from '../index.js'
+import KnMessage from '../index'
 // import KnToast from '../../toast/index'
 import KnLoading from '../../loading/index'
 export default {

@@ -31,7 +31,7 @@
   </div>
 </template>
 <script>
-import Icon from '../icon'
+import Icon from '../../icon'
 
 export default {
   name: 'kn-cell',
@@ -83,5 +83,5 @@ export default {
 }
 </script>
 <style lang="scss">
-@import './index.scss';
+@import './main.scss';
 </style>

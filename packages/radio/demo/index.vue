@@ -19,7 +19,7 @@
   </div>
 </template>
 <script>
-import KnRadio from '../index.vue'
+import KnRadio from '../index'
 export default {
   name: 'kn-radio-demo',
   data() {

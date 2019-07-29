@@ -35,8 +35,8 @@
   </div>
 </template>
 <script>
-import icon from '../../icon'
-import app from '../index.vue'
+import icon from '../../icon/'
+import app from '../index'
 export default {
   name: 'kn-cell-demo',
   data() {
@@ -60,6 +60,7 @@ export default {
 </script>
 <style lang="scss">
 @import '../../style/index.scss';
+
 html,
 body {
   margin: 0;

@@ -3,15 +3,15 @@
  */
 
 // import packages
-import KnButton from './button/index.vue'
-import KnCell from './cell/index.vue'
-import KnIcon from './icon/index.vue'
-import KnProgress from './progress/index.vue'
-import KnPullRefresh from './pullRefresh/index.vue'
-import KnRadio from './radio/index.vue'
-import KnLoading from './loading/index.js'
-import KnMessage from './message/index.js'
-import KnToast from './toast/index.js'
+import KnButton from './button/src/'
+import KnCell from './cell/src/'
+import KnIcon from './icon/src/'
+import KnProgress from './progress/src/'
+import KnPullRefresh from './pullRefresh/src/'
+import KnRadio from './radio/src/'
+import KnLoading from './loading/src/main.js/src/'
+import KnMessage from './message/src/main.js/src/'
+import KnToast from './toast/src/main.js/src/'
 
 // package version
 const version = '0.5.2'

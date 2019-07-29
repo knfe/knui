@@ -50,7 +50,7 @@
   </div>
 </template>
 <script>
-import knLoading from '../index.js'
+import knLoading from '../index'
 
 export default {
   name: 'kn-loading-demo',

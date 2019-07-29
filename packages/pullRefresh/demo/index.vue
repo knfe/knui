@@ -6,7 +6,7 @@
   </div>
 </template>
 <script>
-import PullRefresh from '../index.vue'
+import PullRefresh from '../index'
 import { setTimeout } from 'timers'
 export default {
   name: 'kn-pullrefresP-demo',

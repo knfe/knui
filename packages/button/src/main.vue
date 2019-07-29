@@ -1,7 +1,12 @@
 <template>
-  <button class="kn-button" :class="[`kn-button--${type}`, `kn-button--${size}`, {
+  <button
+    class="kn-button"
+    :class="[`kn-button--${type}`, `kn-button--${size}`, {
     'is-plain': plain
-  }]" :disabled="disabled" @click="btnClick">
+  }]"
+    :disabled="disabled"
+    @click="btnClick"
+  >
     <slot></slot>
   </button>
 </template>
@@ -18,9 +23,9 @@
  * @example
  * <kn-button :size="'large'" :type="'primary'" :plain="true"></kn-button>
  */
-export default{
+export default {
   name: 'kn-button',
-  data () {
+  data() {
     return {}
   },
   props: {
@@ -28,23 +33,14 @@ export default{
       type: String,
       default: 'primary',
       validator(value) {
-        return [
-          'primary',
-          'success',
-          'warning',
-          'danger'
-        ].includes(value)
+        return ['primary', 'success', 'warning', 'danger'].includes(value)
       }
     },
     size: {
       type: String,
       default: 'large',
       validator(value) {
-        return [
-          'small',
-          'large',
-          'middle'
-        ].includes(value)
+        return ['small', 'large', 'middle'].includes(value)
       }
     },
     plain: {
@@ -64,5 +60,5 @@ export default{
 }
 </script>
 <style lang="scss">
-  @import "./index.scss";
+@import './main.scss';
 </style>

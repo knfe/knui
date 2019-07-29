@@ -7,7 +7,7 @@
   </div>
 </template>
 <script>
-import app from '../index.vue'
+import app from '../index'
 export default {
   name: 'kn-icon-demo',
   data() {
@@ -24,7 +24,6 @@ export default {
 }
 </script>
 <style lang="scss">
-// @import '../../style/index.scss';
 @import '../../style/__normalize.scss';
 
 .kn-icon-demo {

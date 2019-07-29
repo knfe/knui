@@ -22,7 +22,7 @@ You can use background icon in every step container or not, if background icon d
 ```
 progressBtnText: [
     { text: '步骤1'},
-    { text: '步骤2', img: require('../images/current-icon.png')},
+    { text: '步骤2', img: require('../src/images/current-icon.png')},
     { text: '步骤3'},
     { text: '步骤4'}
 ]
@@ -36,28 +36,28 @@ progressBtnText: [
 <kn-progress :step="3" :accelerate="true" :progressBtnText="this.progressBtnTextAccelerate4"></kn-progress>
 ```
 progressBtnTextAccelerate1: [
-    { text: '步骤1', img: require('../images/current-icon.png')},
+    { text: '步骤1', img: require('../src/images/current-icon.png')},
     { text: '步骤2'},
     { text: '步骤3'},
     { text: '步骤4'}
 ],
     progressBtnTextAccelerate2: [
     { text: '步骤1'},
-    { text: '步骤2', img: require('../images/current-icon.png')},
+    { text: '步骤2', img: require('../src/images/current-icon.png')},
     { text: '步骤3'},
     { text: '步骤4'}
 ],
     progressBtnTextAccelerate3: [
     { text: '步骤1'},
     { text: '步骤2'},
-    { text: '步骤3', img: require('../images/current-icon.png')},
+    { text: '步骤3', img: require('../src/images/current-icon.png')},
     { text: '步骤4'}
 ],
     progressBtnTextAccelerate4: [
     { text: '步骤1'},
     { text: '步骤2'},
     { text: '步骤3'},
-    { text: '步骤4', img: require('../images/current-icon.png')}
+    { text: '步骤4', img: require('../src/images/current-icon.png')}
 ]
 
 #### use background icon in every step container , you can change the background icon in your demand
@@ -68,9 +68,9 @@ progressBtnTextAccelerate1: [
 <kn-progress :step="2" :useStepIcon="true" :progressBtnText="this.progressBtnText1"></kn-progress>
 ```
 progressBtnText1: [
-    { text: '步骤1', img: require('../images/step-info-1.png')},
-    { text: '步骤2', img: require('../images/step-info-2.png')},
-    { text: '步骤3', img: require('../images/step-info-3.png')}
+    { text: '步骤1', img: require('../src/images/step-info-1.png')},
+    { text: '步骤2', img: require('../src/images/step-info-2.png')},
+    { text: '步骤3', img: require('../src/images/step-info-3.png')}
 ]
 
 ### API
